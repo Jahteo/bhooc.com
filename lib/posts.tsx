@@ -2,9 +2,25 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
+//interfaces are always objects
+export interface Post {
+  id: string & number
+  data: {
+    //optional
+    title?: string
+  }
+  content: string
+}
+
+// types can optionally be an object
+//used hre bc we're combining types
+// export type PostList = Array<Post>
+//Now Post can be either type
+// export type Post = PostReg & PostImg & PostFail
+
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-export function getSortedPostsData() {
+export function getSortedPostsData(): Array<Post> {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map(fileName => {

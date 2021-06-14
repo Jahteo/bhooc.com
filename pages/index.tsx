@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 // import Layout, { siteTitle } from '../components/layout'
 // import utilStyles from '../styles/utils.module.css'
+import type { Post } from '../lib/posts'
 import { getSortedPostsData } from '../lib/posts'
 
 //statically generated
@@ -22,7 +23,9 @@ export async function getStaticProps() {
 //   }
 // }
 
-export default function Home({ allPostsData }: any) {
+export default function Home({ allPostsData }: {
+  allPostsData: Array<Post>
+}): JSX.Element {
   return (
     <Layout home>
       {/* <Head>
@@ -55,15 +58,15 @@ export default function Home({ allPostsData }: any) {
 					<div className="container">
 
 						{/* <!-- Logo --> */}
-							<h1 id="logo"><a href="index.html">Strongly Typed</a></h1>
-							<p>A responsive HTML5 site template. Manufactured by HTML5 UP.</p>
+							<h1 id="logo"><a href="index.html">Bighorn Olive Oil</a></h1>
+							{/* <p>A responsive HTML5 site template. Manufactured by HTML5 UP.</p> */}
 
 						{/* <!-- Nav --> */}
 							<nav id="nav">
 								<ul>
-									<li><a className="icon solid fa-home" href="index.html"><span>Introduction</span></a></li>
-									<li>
-										<a href="#" className="icon fa-chart-bar"><span>Dropdown</span></a>
+									<li><a className="icon solid fa-home" href="index.html"><span>Oils</span></a></li>
+									{/* <li>
+										<a href="#" className="icon fa-chart-bar"><span>Vinegars</span></a>
 										<ul>
 											<li><a href="#">Lorem ipsum dolor</a></li>
 											<li><a href="#">Magna phasellus</a></li>
@@ -78,10 +81,11 @@ export default function Home({ allPostsData }: any) {
 											</li>
 											<li><a href="#">Veroeros feugiat</a></li>
 										</ul>
-									</li>
-									<li><a className="icon solid fa-cog" href="left-sidebar.html"><span>Left Sidebar</span></a></li>
-									<li><a className="icon solid fa-retweet" href="right-sidebar.html"><span>Right Sidebar</span></a></li>
-									<li><a className="icon solid fa-sitemap" href="no-sidebar.html"><span>No Sidebar</span></a></li>
+									</li> */}
+									<li><a className="icon solid fa-cog" href="left-sidebar.html"><span>Vinegars</span></a></li>
+									<li><a className="icon solid fa-retweet" href="right-sidebar.html"><span>Gifts</span></a></li>
+									{/* <li><a className="icon solid fa-sitemap" href="no-sidebar.html"><span>Corporate & Weddings</span></a></li> */}
+									<li><a className="icon solid fa-sitemap" href="no-sidebar.html"><span>Recipes</span></a></li>
 								</ul>
 							</nav>
 
