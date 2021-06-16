@@ -2,7 +2,7 @@
 import Layout from '../components/Layout'
 // import Layout, { siteTitle } from '../components/layout'
 // import utilStyles from '../styles/utils.module.css'
-import type { Post } from '../lib/posts'
+// import type { Post } from '../lib/posts'
 // import { getSortedPostsData } from '../lib/posts'
 
 
@@ -25,9 +25,10 @@ import type { Post } from '../lib/posts'
 //   }
 // }
 
-export default function Home({ allPostsData }: {
-  allPostsData: Array<Post>
-}): JSX.Element {
+export default function Home(): JSX.Element {
+// export default function Home({ allPostsData }: {
+//   allPostsData: Array<Post>
+// }): JSX.Element {
   return (
     <Layout>
       {/* //Todo: setup head (aka page titles) */}
