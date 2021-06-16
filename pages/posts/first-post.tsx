@@ -1,15 +1,15 @@
 import Link from 'next/link'
 // import Image from 'next/image'
 import Head from 'next/head'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 
 export default function FirstPost () {
   return (
     <Layout>
-    <Head>
-    <title>First Post</title>
+      <Head>
+        <title>First Post</title>
 
-    </Head>
+      </Head>
 
       <h1> First Post here</h1>
       <h2>
