@@ -1,6 +1,6 @@
 // import React from 'react'
 
-export function FeatureTrio ({header, feature1, feature2, feature3}) {
+export function FeatureTrio (): JSX.Element {
   return (
     //id features gives white background + ???
     <section id="features">
