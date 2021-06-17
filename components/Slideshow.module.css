@@ -1,0 +1,16 @@
+/* //?? this file is not being read if imported to Slideshow.tsx or to _app.tsx */
+/* //Todo: move out of main scss to here? */
+/* .each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 350px !important;
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+} */

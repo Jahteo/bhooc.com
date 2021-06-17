@@ -805,6 +805,7 @@
 
 		> ul {
 			text-align: center;
+			margin-bottom: 0;
 			> li {
 				display: inline-block;
 				padding-right: 2em;
@@ -1095,6 +1096,28 @@
 		margin-top: 6em;
 		padding-top: 4em;
 	}
+
+	/* Slideshow */
+
+	.each-slide > div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-size: cover;
+		height: 350px !important;
+	}
+
+	.each-slide span {
+		padding: 20px;
+		font-size: 20px;
+		background: #ebebeb;
+		text-align: center;
+	}
+	button.each-slideshow-indicator {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		}
+
 
 /* XLarge */
 
