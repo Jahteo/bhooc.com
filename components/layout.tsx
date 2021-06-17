@@ -90,6 +90,24 @@ const navList = [
   },
 ]
 
+const learnMoreLinks = [
+  {
+    to: '/about',
+    label: 'About Us',
+    nest: 0,
+  },
+  {
+    to: '/faq',
+    label: 'Faq',
+    nest: 0,
+  },
+  {
+    to: '/shipping',
+    label: 'Shipping',
+    nest: 0,
+  },
+]
+
 const openSidebar = () => {
   // document.body.classList.add('navPanel-visible')
   if (document.body.classList.contains('navPanel-visible')) {
@@ -352,9 +370,9 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
                   <div className="col-6 col-12-small">
                     <header><h3>Learn More</h3></header>
                     <ul className="no-bullets">
-                      <li>About Us</li>
-                      <li>Faq</li>
-                      <li>Shipping</li>
+                      {learnMoreLinks.map((link) => {
+                        return <li>{buildSideLink(link)}</li>
+                      })}
                     </ul>
                   </div>
                   <div className="col-6 col-12-small">

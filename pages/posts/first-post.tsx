@@ -5,13 +5,13 @@ import Layout from '../../components/Layout'
 
 export default function FirstPost (): JSX.Element {
   return (
-    <Layout>
+    <>
       <Head>
         <title>First Post</title>
 
       </Head>
 
-      <h1> First Post here</h1>
+      <h1> First Post Test here</h1>
       <h2>
         <Link href="/">
           <a>Back to home</a>
@@ -24,6 +24,6 @@ export default function FirstPost (): JSX.Element {
     width={144} // Desired size with correct aspect ratio
     alt="Your Name"
   /> */}
-    </Layout>
+    </>
   )
 }
