@@ -1,12 +1,10 @@
-// import styles from './layout.module.css'
+import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import React from "react"
+import SwiperProducts from "../components/SwiperProducts";
+
 
 export default function products({ children }: { children: React.ReactNode }): JSX.Element {
-  // useEffect(() => {
-  //   closeSidebar()
-  // })
 
   return (
     <div >
@@ -20,9 +18,7 @@ export default function products({ children }: { children: React.ReactNode }): J
               <header>
                 <h2><strong>Olive Oils</strong></h2>
               </header>
-              {/* <span className="image featured"><img src="images/pic04.jpg" alt="" /></span> */}
-              <h3>And yeah, that's basically it</h3>
-              <p>Phasellus laoreet massa id justo mattis pharetra. </p>
+              <SwiperProducts slides={oilSlides}></SwiperProducts>
               <ul className="actions">
                 <li><a href="#" className="button icon solid">See all oils</a></li>
               </ul>
@@ -32,9 +28,7 @@ export default function products({ children }: { children: React.ReactNode }): J
               <header>
                 <h2><strong>Vinegars</strong></h2>
               </header>
-              {/* <span className="image featured"><img src="images/pic04.jpg" alt="" /></span> */}
-              <h3>And yeah, that's basically it</h3>
-              <p>Phasellus laoreet massa id justo mattis pharetra. </p>
+              <SwiperProducts slides={oilSlides}></SwiperProducts>
               <ul className="actions">
                 <li><a href="#" className="button icon solid">See all vinegars</a></li>
               </ul>
@@ -44,9 +38,7 @@ export default function products({ children }: { children: React.ReactNode }): J
               <header>
                 <h2><strong>Pairings</strong></h2>
               </header>
-              {/* <span className="image featured"><img src="images/pic04.jpg" alt="" /></span> */}
-              <h3>And yeah, that's basically it</h3>
-              <p>Phasellus laoreet massa id justo mattis pharetra. </p>
+              <SwiperProducts slides={oilSlides}></SwiperProducts>
               <ul className="actions">
                 <li><a href="#" className="button icon solid">See all pairings</a></li>
               </ul>
@@ -56,9 +48,7 @@ export default function products({ children }: { children: React.ReactNode }): J
               <header>
                 <h2><strong>Gifts</strong></h2>
               </header>
-              {/* <span className="image featured"><img src="images/pic04.jpg" alt="" /></span> */}
-              <h3>And yeah, that's basically it</h3>
-              <p>Phasellus laoreet massa id justo mattis pharetra. </p>
+              <SwiperProducts slides={oilSlides}></SwiperProducts>
               <ul className="actions">
                 <li><a href="#" className="button icon solid">See all gifts</a></li>
               </ul>
@@ -70,3 +60,290 @@ export default function products({ children }: { children: React.ReactNode }): J
     </div>
   )
 }
+
+
+const oilSlides: Array<{
+  name: string;
+  description: string;
+  img: string;
+  url: string;
+  recipes: {
+    name: string;
+    url: string;
+    img: string;
+  }[];
+  pairings: string[];
+  nutrition: string;
+  ingredients: string;
+}> = [
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+  {
+    name: "Garlic Olive Oil",
+    description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    url: "/garlic-olive-oil",
+    recipes: [
+      {
+        name: "Breadsticks",
+        url: "recipes/breadsticks",
+        img: "https://source.unsplash.com/20x20/?bread",
+      },
+    ],
+    pairings: [
+      "Peach White Balsamic", "Grapefruit White Balsamic",
+    ],
+    nutrition: "oil",
+    ingredients: "Olives, garlic"
+  },
+]
