@@ -394,6 +394,23 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
             <li>
               Design: <a href="http://html5up.net">HTML5 UP</a>
             </li>
+            <li>
+              <span>Review us on Google & Yelp:  </span>
+              <a className="icon alt brands fa-google"
+                href="https://search.google.com/local/writereview?placeid=ChIJp3uIxElBmYARFLc1UzeWabs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="label"> Google </span>
+              </a>
+              <a className="icon alt brands fa-yelp"
+                href="https://www.yelp.com/writeareview/biz/OgO5i4haAsLP2f2d2pC8OQ?return_url=%2Fbiz%2FOgO5i4haAsLP2f2d2pC8OQ&source=biz_details_war_button"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="label"> Yelp </span>
+              </a>
+            </li>
           </ul>
         </div>
       </section>

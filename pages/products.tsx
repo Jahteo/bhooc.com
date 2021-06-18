@@ -3,35 +3,6 @@ import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 
-// init layout if using styles.containter from layout.module.css = NEXTJS REFERENCE
-// export default function Layout({ children }: any) {
-//   return <div className={styles.container}>{children}</div>
-// }
-
-//fast setup for a blank layout - TEMP
-// export default function Layout({ children }: any) {
-//   return <div>{children}</div>
-// }
-
-//statically generated - REFERENCE
-// export async function getStaticProps() {
-//   const allPostsData = getSortedPostsData()
-//   return {
-//     props: {
-//       allPostsData
-//     }
-//   }
-// }
-
-// export async function getServerSideProps(context) {
-//   return {
-//     props: {
-//       // props for your component
-//     }
-//   }
-// }
-
-
 export default function products({ children }: { children: React.ReactNode }): JSX.Element {
   // useEffect(() => {
   //   closeSidebar()
@@ -39,7 +10,63 @@ export default function products({ children }: { children: React.ReactNode }): J
 
   return (
     <div >
-    SHOP HERE
+      <section id="main">
+        <div className="container">
+          <div id="content">
+
+            <h2>SearchBar here</h2>
+
+            <article className="box post">
+              <header>
+                <h2><strong>Olive Oils</strong></h2>
+              </header>
+              {/* <span className="image featured"><img src="images/pic04.jpg" alt="" /></span> */}
+              <h3>And yeah, that's basically it</h3>
+              <p>Phasellus laoreet massa id justo mattis pharetra. </p>
+              <ul className="actions">
+                <li><a href="#" className="button icon solid">See all oils</a></li>
+              </ul>
+            </article>
+
+            <article className="box post">
+              <header>
+                <h2><strong>Vinegars</strong></h2>
+              </header>
+              {/* <span className="image featured"><img src="images/pic04.jpg" alt="" /></span> */}
+              <h3>And yeah, that's basically it</h3>
+              <p>Phasellus laoreet massa id justo mattis pharetra. </p>
+              <ul className="actions">
+                <li><a href="#" className="button icon solid">See all vinegars</a></li>
+              </ul>
+            </article>
+
+            <article className="box post">
+              <header>
+                <h2><strong>Pairings</strong></h2>
+              </header>
+              {/* <span className="image featured"><img src="images/pic04.jpg" alt="" /></span> */}
+              <h3>And yeah, that's basically it</h3>
+              <p>Phasellus laoreet massa id justo mattis pharetra. </p>
+              <ul className="actions">
+                <li><a href="#" className="button icon solid">See all pairings</a></li>
+              </ul>
+            </article>
+
+            <article className="box post">
+              <header>
+                <h2><strong>Gifts</strong></h2>
+              </header>
+              {/* <span className="image featured"><img src="images/pic04.jpg" alt="" /></span> */}
+              <h3>And yeah, that's basically it</h3>
+              <p>Phasellus laoreet massa id justo mattis pharetra. </p>
+              <ul className="actions">
+                <li><a href="#" className="button icon solid">See all gifts</a></li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
