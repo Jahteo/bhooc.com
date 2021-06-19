@@ -21,6 +21,7 @@ export default function products({ children }: { children: React.ReactNode }): J
               <SwiperProducts slides={oilSlides}></SwiperProducts>
               <ul className="actions">
                 <li><a href="#" className="button icon solid">See all oils</a></li>
+                <li><a href="/product/garlic-olive-oil" className="button icon solid">See Garlic Oil</a></li>
               </ul>
             </article>
 

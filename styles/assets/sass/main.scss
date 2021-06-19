@@ -408,11 +408,11 @@
 
 /* Divided */
 
-	ul.divided {
+	ul.divided, section.divided {
 		list-style: none;
 		padding-left: 0;
 
-		li {
+		li, section.divided > div {
 			border-top: solid 2px #e5e5e5;
 			padding-left: 0;
 			margin: 2.5em 0 0 0;
@@ -1031,6 +1031,10 @@
 			box-shadow: inset 0px 8px 0px 0px #fff, inset 0px 10px 0px 0px #e5e5e5;
 			margin: 5em 0 0 0;
 			padding: 5em 0 0 0;
+			&.alt {
+				border: none;
+				box-shadow: none;
+			}
 
 			&:first-child {
 				border-top: 0;
@@ -1098,7 +1102,20 @@
 		padding-top: 1em;
 	}
 
-	// CUSTOM
+	// CUSTOM //
+
+	.underline {
+		border-bottom: solid 1px #ddd;
+	}
+
+	.double-line{
+		border-top: none;
+		padding-bottom: 40px;
+		margin-bottom: 40px;
+		border-bottom: solid 2px #e5e5e5;
+    -webkit-box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
+    box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
+	}
 
 	/* Swiper */
 	.swiper-container {

@@ -1,5 +1,5 @@
 import React from "react"
-// import Image from "next/image"
+import Image from "next/image"
 import Link from "next/link"
 
 // import Swiper from 'swiper';
@@ -8,7 +8,13 @@ import 'swiper/swiper-bundle.css';
 import SwiperCore, { Mousewheel, Navigation, Pagination } from 'swiper/core';
 SwiperCore.use([Navigation, Pagination, Mousewheel]);
 
-
+function LinkOrImg (image: string): JSX.Element {
+  if (image.includes("http")) {
+    return <img src={image}></img>
+  } else {
+    return <Image src={image} height={200} width={200} layout="responsive"></Image>
+  }
+}
 
 // export default function SwiperProducts({slides}) : JSX.Element {
 export default function SwiperProducts({slides}
@@ -34,6 +40,7 @@ export default function SwiperProducts({slides}
         className="mySwiper"
         navigation
         pagination={{"clickable": true}}
+        preventClicks={false}
         // spaceBetween={30}
         // slidesPerView={5}
         mousewheel={true}
@@ -42,7 +49,7 @@ export default function SwiperProducts({slides}
         // When cssMode enabled it will use modern CSS Scroll Snap API. It doesn't support all of Swiper's features, but potentially should bring a much better performance in simple configurations.
         // This is what is not supported when it is enabled:
         // All effects (Fade, Coverflow, Flip, Cube), Zoom, Virtual Slides, speed parameter will have no effect, All transition start/end related events
-        cssMode={true}
+        // cssMode={true}
         // Todo: set breakpoints properly
         breakpoints={{
           // when window width is >= 640px
@@ -63,13 +70,20 @@ export default function SwiperProducts({slides}
       >
         {slides.map(({ name, img, url }) => {
           // Todo: Fix broken <Link>
-          return <Link href={url}>
-            <a>
-              <SwiperSlide style={{backgroundImage: `url(${img})`, height: "200px"}}>
-                {name}
-              </SwiperSlide>
-            </a>
-          </Link>
+          return (
+            <Link href={url} passHref>
+              <a>
+                <SwiperSlide
+                  style={{
+                  // backgroundImage: `url(${img})`,
+                    height: "200px"
+                  }}>
+                  {LinkOrImg(img)}
+                  <h3>{name}</h3>
+                </SwiperSlide>
+              </a>
+            </Link>
+          )
         })}
       </Swiper>
     </div>
