@@ -213,26 +213,17 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
       {/* <!-- Footer --> */}
       <section id="footer">
         <div className="container">
-          <header>
-            <h2>
-              Questions or comments? <strong>Call us at (775) 870-1500.</strong>{" "}
-            </h2>
-          </header>
           <div className="row">
             <div className="col-6 col-12-medium">
               <section>
-                {/* <header>
-                    <h2>Gentlemen, behold! This is <strong>Strongly Typed</strong>!</h2>
-                  </header> */}
-                <h3>Partner Locations</h3>
+                {/* <h3>Partner Locations</h3> */}
                 <div className="container">
-                  <div className="row aln-center">
+                  <div className="row aln-left">
                     <div className="col-4 col-6-medium col-12-small">
                       <section>
                         <Image
                           priority
                           src="/images/BHLogo.jpeg"
-                          // className={utilStyles.borderCircle}
                           height={144}
                           width={144}
                           alt="Bighorn Logo"
@@ -353,11 +344,6 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
                         </ul>
                       </section>
                     </div>
-                    {/* <div className="col-12">
-								<ul className="actions">
-									<li><a href="#" className="button icon solid fa-file">Tell Me More</a></li>
-								</ul>
-							</div> */}
                   </div>
                 </div>
               </section>
@@ -366,9 +352,15 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
             {/* Right Column */}
             <div className="col-6 col-12-medium">
               <section>
-                <div className="row">
+                <h2>
+                  Questions or comments? <br/><strong>Call us at (775) 870-1500.</strong>{" "}
+                </h2>
+                <hr className="double-line footer-grey"/>
+                <div className="row aln-left">
                   <div className="col-6 col-12-small">
-                    <header><h3>Learn More</h3></header>
+                    <header>
+                      <h3>Learn More</h3>
+                    </header>
                     <ul className="no-bullets">
                       {learnMoreLinks.map((link) => {
                         return <li>{buildSideLink(link)}</li>
@@ -395,7 +387,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
               Design: <a href="http://html5up.net">HTML5 UP</a>
             </li>
             <li>
-              <span>Review us on Google & Yelp:  </span>
+              <span>Review us on Google & Yelp:    </span>
               <a className="icon alt brands fa-google"
                 href="https://search.google.com/local/writereview?placeid=ChIJp3uIxElBmYARFLc1UzeWabs"
                 target="_blank"

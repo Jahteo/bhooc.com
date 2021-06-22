@@ -1091,7 +1091,12 @@
 		h2 {
 			text-align: center;
 		}
+
 	}
+	// #footer > .container {
+	// display: flex;
+	// justify-content: space-between;
+	// }
 
 /* Copyright */
 
@@ -1115,6 +1120,12 @@
 		border-bottom: solid 2px #e5e5e5;
     -webkit-box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
     box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
+
+		&.footer-grey {
+			-webkit-box-shadow: inset 0px -8px 0px 0px #f0f0f0, inset 0px -10px 0px 0px #e5e5e5;
+    box-shadow: inset 0px -8px 0px 0px #f0f0f0, inset 0px -10px 0px 0px #e5e5e5;
+
+		}
 	}
 
 	/* Swiper */

@@ -1,6 +1,6 @@
 import React from "react"
-import Image from "next/image"
-import Link from "next/link"
+// import Image from "next/image"
+// import Link from "next/link"
 import SwiperProducts from "../components/SwiperProducts";
 
 
@@ -63,20 +63,7 @@ export default function products({ children }: { children: React.ReactNode }): J
 }
 
 
-const oilSlides: Array<{
-  name: string;
-  description: string;
-  img: string;
-  url: string;
-  recipes: {
-    name: string;
-    url: string;
-    img: string;
-  }[];
-  pairings: string[];
-  nutrition: string;
-  ingredients: string;
-}> = [
+const oilSlides = [
   {
     name: "Garlic Olive Oil",
     description: "Garlic Olive Oil is very versatile and can be used in everything from cooking eggs to enhancing chicken, pork and beef. Try it on your roasted vegetables, baked potatoes and pasta. Tastes great as a bread dipper when paired with Traditional Dark Balsamic. It even goes well with our fruity Balsamic Vinegars.",

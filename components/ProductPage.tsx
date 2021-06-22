@@ -1,9 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
+// import * as customTypes from '../types/customTypes'
 
 import SwiperProducts from "../components/SwiperProducts"
 
 export interface Product {
+  id: number;
   name: string;
   description: string;
   img: string;
@@ -19,9 +21,10 @@ export interface Product {
       name: string;
       url: string;
   }[];
+  price: number;
 }
 
-export default function ProductPage ({product} : Product): JSX.Element {
+export default function ProductPage ({product} : {product: customTypes.Product}): JSX.Element {
   return (
     <section id="main">
 

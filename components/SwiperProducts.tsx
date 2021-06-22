@@ -16,22 +16,33 @@ function LinkOrImg (image: string): JSX.Element {
   }
 }
 
-// export default function SwiperProducts({slides}) : JSX.Element {
-export default function SwiperProducts({slides}
-//   : Array<{
-//   name: string;
-//   description: string;
-//   img: string;
-//   url: string;
-//   recipes: {
+export interface Slide {
+  name: string;
+  url: string;
+  img: string;
+}
+
+export type Slides = Array<Slide>
+// export interface Slides{
+//     id: number;
 //     name: string;
-//     url: string;
+//     description: string;
 //     img: string;
-//   }[];
-//   pairings: string[];
-//   nutrition: string;
-//   ingredients: string;
-// }>
+//     url: string;
+//     recipes: {
+//       name: string;
+//       url: string;
+//       img: string;
+//     }[];
+//     pairings: string[];
+//     price: number;
+//     nutrition: string;
+//     ingredients: string;
+//   }[]
+
+
+// export default function SwiperProducts({slides}) : JSX.Element {
+export default function SwiperProducts({slides}: {slides: Slides}
 ) : JSX.Element {
 
   return (

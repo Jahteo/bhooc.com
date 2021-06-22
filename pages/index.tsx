@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Slideshow from '../components/Slideshow'
-import RecentRecipes from '../components/RecentRecipes'
+// import RecentRecipes from '../components/RecentRecipes'
+import ImageBar from '../components/ImageBar'
 
 // import Layout, { siteTitle } from '../components/layout'
 // import utilStyles from '../styles/utils.module.css'
@@ -42,33 +43,13 @@ export default function Home(): JSX.Element {
       <Head>
         <title>Home</title>
       </Head>
-      {/* <section className={utilStyles.headingMd}>
-        <p>Blurby mcBlurb Blurbity Blurbing</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
-
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
-          ))}
-        </ul>
-      </section> */}
 
       {/* <Slideshow ImgSlide={imgSlides}/> */}
       <Slideshow/>
 
-      <RecentRecipes/>
+      <ImageBar ImgList={recipes}/>
+      <ImageBar ImgList={pairings}/>
+      {/* <RecentRecipes/> */}
 
       <section id="banner">
         <div className="container">
@@ -79,3 +60,97 @@ export default function Home(): JSX.Element {
     </>
   )
 }
+
+const recipes = [
+  {
+    header: "Recent Recipes",
+    name: "Breadsticks",
+    url: "/breadsticks",
+    img: "https://source.unsplash.com/200x200/?bread",
+    text: "Great for Friday with friends",
+    products: [
+      "BHOOC EVOO",
+      "Garlic Olive Oil"
+    ]
+  },
+  {
+    header: "Recent Recipes",
+    name: "Breadsticks",
+    url: "/breadsticks",
+    img: "https://source.unsplash.com/200x200/?bread",
+    text: "Great for Friday with friends",
+    products: [
+      "BHOOC EVOO",
+      "Garlic Olive Oil"
+    ]
+  },
+  {
+    header: "Recent Recipes",
+    name: "Breadsticks",
+    url: "/breadsticks",
+    img: "https://source.unsplash.com/200x200/?bread",
+    text: "Great for Friday with friends",
+    products: [
+      "BHOOC EVOO",
+      "Garlic Olive Oil"
+    ]
+  },
+  {
+    header: "Recent Recipes",
+    name: "Breadsticks",
+    url: "/breadsticks",
+    img: "https://source.unsplash.com/200x200/?bread",
+    text: "Great for Friday with friends",
+    products: [
+      "BHOOC EVOO",
+      "Garlic Olive Oil"
+    ]
+  },
+]
+
+const pairings = [
+  {
+    header: "Featured Pairings",
+    name: "Garlic and Neopolitan Herb",
+    url: "/Garlic and Neopolitan Herb",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    text: "Bread Dipping and Steaks",
+    products: [
+      "BHOOC EVOO",
+      "Garlic Olive Oil"
+    ]
+  },
+  {
+    header: "Featured Pairings",
+    name: "Garlic and Neopolitan Herb",
+    url: "/Garlic and Neopolitan Herb",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    text: "Bread Dipping and Steaks",
+    products: [
+      "BHOOC EVOO",
+      "Garlic Olive Oil"
+    ]
+  },
+  {
+    header: "Featured Pairings",
+    name: "Garlic and Neopolitan Herb",
+    url: "/Garlic and Neopolitan Herb",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    text: "Bread Dipping and Steaks",
+    products: [
+      "BHOOC EVOO",
+      "Garlic Olive Oil"
+    ]
+  },
+  {
+    header: "Featured Pairings",
+    name: "Garlic and Neopolitan Herb",
+    url: "/Garlic and Neopolitan Herb",
+    img: "https://source.unsplash.com/200x200/?garlic",
+    text: "Bread Dipping and Steaks",
+    products: [
+      "BHOOC EVOO",
+      "Garlic Olive Oil"
+    ]
+  },
+]
