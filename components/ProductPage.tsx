@@ -1,34 +1,28 @@
 import React from 'react'
 import Image from 'next/image'
-// import * as customTypes from '../types/customTypes'
+import { Product } from '../types/Product'
+import { Recipe } from '../types/Recipe'
+import recipes from '../data/recipes'
 
 import SwiperProducts from "../components/SwiperProducts"
-
-export interface Product {
-  id: number;
-  name: string;
-  description: string;
-  img: string;
-  url: string;
-  ingredients: string;
-  nutritionImg: string;
-  recipes: {
-      name: string;
-      url: string;
-      img: string;
-  }[];
-  pairings: {
-      name: string;
-      url: string;
-  }[];
-  price: number;
+function prettifyName(str: string) {
+  return str.replace(/-/g, " ").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
 
-export default function ProductPage ({product} : {product: customTypes.Product}): JSX.Element {
+function relevantRecipes(product: Product){
+  const recipeList: Recipe[] = []
+  recipes.map((recipe) => {
+    if (recipe.products.includes(product.slug)){
+      recipeList.push(recipe)
+    }
+  })
+  return recipeList
+}
+
+export default function ProductPage ({ product }: { product: Product }): JSX.Element {
   return (
     <section id="main">
 
-      {/* <div className="container double-line"> */}
       <div className="container">
         <div className="row">
 
@@ -67,7 +61,10 @@ export default function ProductPage ({product} : {product: customTypes.Product})
                   <h2>Mix it with:</h2>
                   <ul className="no-bullets">
                     {product.pairings.map((pair) => {
-                      return <li><a href={`product/${pair.url}`}><strong>{pair.name}</strong></a></li>
+                      console.log(typeof(pair))
+                      const name = prettifyName(pair)
+                      // return <li><a href={`product/${pair}`}><strong>{pair}</strong></a></li>
+                      return <li><a href={`product/${pair}`}><strong>{name}</strong></a></li>
                     })}
                   </ul>
                 </header>
@@ -79,7 +76,7 @@ export default function ProductPage ({product} : {product: customTypes.Product})
             <article className="box excerpt alt">
               <header>
                 <h2>Recipes:</h2>
-                <SwiperProducts slides={product.recipes}/>
+                <SwiperProducts slides={relevantRecipes(product)}/>
               </header>
             </article>
           </div>
