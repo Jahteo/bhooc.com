@@ -1207,6 +1207,23 @@
 		// 	// --card-gradient: #24a9d5 max(8.5rem, 20vh);
 		// }
 	}
+	//* Cart *//
+	.cart-item {
+		display: flex;
+		justify-content: space-evenly;
+
+		.label {
+			display: none;
+		}
+	}
+	.quantity {
+		margin: 20px;
+	}
+	.icon-label {
+		display: none;
+		margin: 20px;
+	}
+
 
 /* XLarge */
 
