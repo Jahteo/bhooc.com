@@ -65,20 +65,21 @@ export default function SwiperProducts({slides}: {slides: Product[] | Recipe[] }
         }}
         style={{width: "100%", height: "250px"}}
       >
-        {slides.map(({ name, img, slug, price=-1 }) => {
+        {slides.map((slide: Recipe | Product) => {
           return (
-            <SwiperSlide key={slug}
+            <SwiperSlide key={slide.slug}
               style={{
                 // backgroundImage: `url(${img})`,
                 height: "200px"
               }}>
               {/* {slideType == "Recipe"} */}
               {/* {openLink(slug, price))} */}
-              <Link href={LinkHref(slug, price)} passHref>
+              {/* <Link href={LinkHref(slide.slug, (slide.price ? slide.price : -1))} passHref> */}
+              <Link href={LinkHref(slide.slug, (slide.price || -1))} passHref>
                 {/* <Link href={`/product/${slug}`} passHref> */}
                 <a>
-                  {LinkOrImg(img)}
-                  <h3>{name}</h3>
+                  {LinkOrImg(slide.img)}
+                  <h3>{slide.name}</h3>
                 </a>
               </Link>
             </SwiperSlide>

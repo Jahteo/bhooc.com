@@ -9,7 +9,7 @@ const recipe: Recipe = {
   description: "",
 
   categories: [],
-  products: [""],
+  products: [],
 }
 
 export default recipe

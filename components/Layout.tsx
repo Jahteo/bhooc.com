@@ -33,35 +33,6 @@ import React from "react"
 
 const isBrowser = typeof document !== 'undefined'
 
-// const navList = [
-//   {
-//     to: '/products',
-//     label: 'Shop',
-//     nest: [
-//       {
-//         to: '/oils',
-//         label: 'Oils',
-//         // nest: 1,
-//       },
-//       {
-//         to: '/vinegars',
-//         label: 'Vinegars',
-//         // nest: 1,
-//       },
-//     ],
-//   },
-//   {
-//     to: '/gifts',
-//     label: 'Gifts',
-//     // nest: 0,
-//   },
-//   {
-//     to: '/recipes',
-//     label: 'Recipes',
-//     // nest: 0,
-//   },
-// ]
-
 const navList = [
   {
     to: '/products',
@@ -190,9 +161,11 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
               </a>
             </li>
             <li>
-              <a className="icon alt solid fas fa-shopping-cart">
-                <div className="label">Shopping Cart</div>
-              </a>
+              <Link href="/cart">
+                <a className="icon alt solid fas fa-shopping-cart">
+                  <div className="label">Shopping Cart</div>
+                </a>
+              </Link>
             </li>
           </ul>
         </div>

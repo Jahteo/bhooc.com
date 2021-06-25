@@ -59,18 +59,18 @@ export default function SwiperNoNav({slides}: {slides: Product[] | Recipe[] }
         }}
         style={{ height: "200px"}}
       >
-        {slides.map(({ name, img, slug }) => {
+        {slides.map((slide: Recipe | Product) => {
           return (
-            <SwiperSlide key={slug}
+            <SwiperSlide key={slide.slug}
               style={{
                 // backgroundImage: `url(${img})`,
                 height: "200px",
                 // width: "200px"
               }}>
-              <Link href={`/product/${slug}`} passHref>
+              <Link href={`/product/${slide.slug}`} passHref>
                 <a>
-                  {NextJSImage(img)}
-                  <h3>{name}</h3>
+                  {NextJSImage(slide.img, slide.name)}
+                  <h3>{slide.name}</h3>
                 </a>
               </Link>
             </SwiperSlide>
