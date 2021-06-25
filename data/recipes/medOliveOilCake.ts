@@ -26,7 +26,7 @@ const recipe: Recipe = {
   description: "",
 
   categories: ["Dessert"],
-  products: ["lemon-olive-oil"],
+  products: ["lemon-olive-oil", "mushroom-and-sage-olive-oil"],
 }
 
 export default recipe

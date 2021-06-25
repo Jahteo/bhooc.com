@@ -18,6 +18,13 @@ function relevantRecipes(product: Product){
   })
   return recipeList
 }
+function checkImg (image: string): JSX.Element {
+  if (image == "") {
+    return <Image src="/images/recipes/norecipeImg.jpg" height={200} width={200} layout="responsive"></Image>
+  } else {
+    return <Image src={image} height={200} width={200} layout="responsive"></Image>
+  }
+}
 
 export default function ProductPage ({ product }: { product: Product }): JSX.Element {
   return (
@@ -28,7 +35,8 @@ export default function ProductPage ({ product }: { product: Product }): JSX.Ele
 
           <div id="sidebar" className="col-4 col-12-medium">
             <section>
-              <Image src={product.img} height={200} width={200} layout="responsive"></Image>
+              {checkImg(product.img)}
+              {/* <Image src={product.img} height={200} width={200} layout="responsive"></Image> */}
             </section>
           </div>
 
@@ -61,7 +69,6 @@ export default function ProductPage ({ product }: { product: Product }): JSX.Ele
                   <h2>Mix it with:</h2>
                   <ul className="no-bullets">
                     {product.pairings.map((pair) => {
-                      console.log(typeof(pair))
                       const name = prettifyName(pair)
                       // return <li><a href={`product/${pair}`}><strong>{pair}</strong></a></li>
                       return <li><a href={`product/${pair}`}><strong>{name}</strong></a></li>
@@ -88,7 +95,8 @@ export default function ProductPage ({ product }: { product: Product }): JSX.Ele
       <div className="container">
         <div className="row">
           <div id="sidebar" className="col-4 col-12-medium">
-            <Image src={product.nutritionImg} height={400} width={200} ></Image>
+            {checkImg(product.nutritionImg)}
+            {/* <Image src={product.nutritionImg} height={400} width={200} ></Image> */}
           </div>
           <div id="content" className="col-8 col-12-medium imp-medium">
             <h3>Ingredients</h3>
