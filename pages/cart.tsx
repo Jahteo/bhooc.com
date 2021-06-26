@@ -1,22 +1,13 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState } from 'react'
 import bighornTheme from '../data/stores/bighornTheme'
 import allProducts from '../data/products'
 import { Product } from '../types/Product'
 import Image from 'next/image'
+import { useLineitems, useCart } from '../services/shopify'
 // import _template from '../data/products/_template'
 
-
-function buildProdList (shoppingList:  {itemSlug: string, quantity: number}[]) {
-  const prodList: Product[] = []
-  allProducts.map((product) => {
-    shoppingList.map((shoppingItem) => {
-      if (product.slug == shoppingItem.itemSlug) {
-        prodList.push(product)
-        //Break or return loop
-      }
-    })
-  })
-  return prodList
+function getProduct(shopifyId: string) {
+  return allProducts.find((product) => product.shopifyId === shopifyId)
 }
 
 function calculateShipping(cart: {product: Product, quantity: number}[])
@@ -52,47 +43,15 @@ function calculateShipping(cart: {product: Product, quantity: number}[])
 
 export default function Cart (): JSX.Element {
   const [cart, setCart] = useState(mockCart2)
-  // const [cart, setCart] = useState(mockCart2)
+  const lineItems = useLineitems()
 
+  const { pay } = useCart()
 
-  function BuildInvoice () {
-    return cart.map(({product, quantity}) => {
-      return(
-        <tr>
-          <td><Image src={product.img} width={100} height={100}/></td>
-          <td>{product.name}</td>
-          <td>
-            <span className="quantity fas fa-plus" onClick={() => increaseQuantity(product, quantity)}>
-              <span className="icon-label">Increase quantity</span>
-            </span>
-            <span>{quantity}</span>
-            <span className=" quantity fas fa-minus" onClick={() => decreaseQuantity(product, quantity)}>
-              <span className="icon-label">Decrease quantity</span>
-            </span>
-          </td>
-          <td>$ {product.price}</td>
-        </tr>
-      )
-    })
+  function increaseQuantity(){
+    //
   }
-
-  function increaseQuantity(product: Product, quantity: number){
-    setCart((cart) =>
-      cart.map((row) =>
-        row.product === product
-          ? { ...row, quantity: row.quantity + 1 }
-          : row
-      )
-    );
-  }
-  function decreaseQuantity(product: Product, quantity: number){
-    setCart((cart) =>
-      cart.map((row) =>
-        row.product === product
-          ? { ...row, quantity: row.quantity - 1 }
-          : row
-      )
-    );
+  function decreaseQuantity(){
+    //
   }
 
   return (
@@ -124,12 +83,45 @@ export default function Cart (): JSX.Element {
               </tr>
             </tfoot>
             <tbody>
-              {BuildInvoice()}
+              {lineItems?.map(({
+                id,
+                //@ts-ignore: shopify has bad types
+                variant,
+                title,
+                linePrice,
+                price,
+                quantity,
+              }) => {
+                const product = getProduct(variant.id as string)
+                return(
+                  <tr key={id}>
+                    <td>
+                      {product && <Image src={product.img} width={100} height={100}/>}
+                    </td>
+                    <td>{product?.name || title}</td>
+                    <td>
+                      <span className="quantity fas fa-plus" onClick={() => increaseQuantity()}>
+                        <span className="icon-label">Increase quantity</span>
+                      </span>
+                      <span>{quantity}</span>
+                      <span className=" quantity fas fa-minus" onClick={() => decreaseQuantity()}>
+                        <span className="icon-label">Decrease quantity</span>
+                      </span>
+                    </td>
+                    <td>${parseFloat(variant.price) * quantity}</td>
+                  </tr>
+                )
+              })}
               {calculateShipping(cart)}
             </tbody>
           </table>
           <div style={{textAlign: 'right'}}>
-            <a href="#" className="button icon solid">Checkout</a>
+            <button
+              onClick={() => pay()}
+              className="button icon solid"
+            >
+              Checkout
+            </button>
           </div>
           <hr className="double-line"/>
 

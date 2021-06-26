@@ -1,3 +1,5 @@
+//Todo: generate these programatically from data/products.
+
 export type ProductSlugs =
   ""
 |  "garlic-olive-oil"

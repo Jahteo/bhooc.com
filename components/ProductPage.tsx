@@ -1,23 +1,21 @@
 import React from 'react'
 import Image from 'next/image'
 import { Product } from '../types/Product'
-import { Recipe } from '../types/Recipe'
 import recipes from '../data/recipes'
+import { useCart } from '../services/shopify'
 
 import SwiperProducts from "../components/SwiperProducts"
+// todo: replace with lookupProducts,(filter over relevant recipes)
 function prettifyName(str: string) {
   return str.replace(/-/g, " ").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
 
 function relevantRecipes(product: Product){
-  const recipeList: Recipe[] = []
-  recipes.map((recipe) => {
-    if (recipe.products.includes(product.slug)){
-      recipeList.push(recipe)
-    }
-  })
-  return recipeList
+  return recipes.filter((recipe) =>
+    recipe.products.includes(product.slug)
+  )
 }
+
 function checkImg (image: string): JSX.Element {
   if (image == "") {
     return <Image src="/images/recipes/norecipeImg.jpg" height={200} width={200} layout="responsive"></Image>
@@ -27,6 +25,8 @@ function checkImg (image: string): JSX.Element {
 }
 
 export default function ProductPage ({ product }: { product: Product }): JSX.Element {
+  const { addProduct } = useCart()
+
   return (
     <section id="main">
 
@@ -49,7 +49,14 @@ export default function ProductPage ({ product }: { product: Product }): JSX.Ele
               {/* <span className="image featured"><img src="images/pic04.jpg" alt="" /></span> */}
               <h3>$ {product.price}</h3>
               <ul className="actions">
-                <li><a href="#" className="button icon solid fa-plus">Add to cart</a></li>
+                <li>
+                  <button
+                    className="button icon solid fa-plus"
+                    onClick={() => {addProduct(product.shopifyId, 1)}}
+                  >
+                    Add to cart
+                  </button>
+                </li>
               </ul>
             </article>
           </div>
