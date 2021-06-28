@@ -22,7 +22,7 @@ const recipe: Recipe = {
   description: "",
 
   categories: ["Mains", "Sides"],
-  products: ["garlic-olive-oil", "mushroom-and-sage-olive-oil"],
+  products: ["garlic-olive-oil", "mushroom-sage-olive-oil"],
 }
 
 export default recipe

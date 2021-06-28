@@ -1,58 +1,38 @@
-import React, { useState } from 'react'
+import React from 'react'
 import bighornTheme from '../data/stores/bighornTheme'
 import allProducts from '../data/products'
-import { Product } from '../types/Product'
 import Image from 'next/image'
 import { useLineitems, useCart } from '../services/shopify'
+import Link from 'next/link'
 // import _template from '../data/products/_template'
 
 function getProduct(shopifyId: string) {
   return allProducts.find((product) => product.shopifyId === shopifyId)
 }
 
-function calculateShipping(cart: {product: Product, quantity: number}[])
-  : JSX.Element {
-  let bottleCount = 0
-  cart.map(({product, quantity}) => {
-    //in case we put a zero-cost non-bottle item (like pairing recipe or gift bag)
-    if(product.price > 0){
-      bottleCount += quantity
-    }
-  })
-  const boxCount = Math.ceil(bottleCount/5)
-  const boxTotal = boxCount * 15
-  return(
-    <tr>
-      <td></td>
-      <td>Shipping</td>
-      <td>
-        {/* <span className="quantity fas fa-plus">
-          <span className="icon-label">Increase quantity</span>
-        </span> */}
-        <span>{bottleCount} bottles = {boxCount} boxes</span>
-        <div><sup>(1 for every 5 bottles)</sup></div>
-        {/* <span className=" quantity fas fa-minus">
-          <span className="icon-label">Decrease quantity</span>
-        </span> */}
-      </td>
-      <td>$ {boxTotal}</td>
-    </tr>
-  )
+function calcBoxes (lineItems: ShopifyBuy.LineItem[]) {
+  // console.log(lineItems)
+  const reducer = (accumulator: number, item: {quantity: number}) => {
+    // console.log("item", item.quantity)
+    return accumulator + item.quantity
+  }
+  return lineItems && Math.ceil(lineItems.reduce(reducer, 0)/5)
 }
 
+function calcSubtotal(lineItems: ShopifyBuy.LineItem[]) {
+  const reducer = (accumulator: number, item: {quantity: number, variant: {price: number}}) => {
+    console.log("item", item.quantity, item.variant.price)
+    return accumulator + (item.quantity * item.variant.price)
+  }
+  //@ts-ignore: shopify's types insist there is no lineItem.variant, which is outdated/wrong
+  const productSubtotal: number = lineItems.reduce(reducer, 0)
+  return  productSubtotal + (calcBoxes(lineItems) * 15)
+}
 
 export default function Cart (): JSX.Element {
-  const [cart, setCart] = useState(mockCart2)
   const lineItems = useLineitems()
 
-  const { pay } = useCart()
-
-  function increaseQuantity(){
-    //
-  }
-  function decreaseQuantity(){
-    //
-  }
+  const { pay, updateQuantity } = useCart()
 
   return (
     <>
@@ -79,7 +59,8 @@ export default function Cart (): JSX.Element {
                 <th></th>
                 <th></th>
                 <th></th>
-                <th>SubTotal: ____</th>
+                <th></th>
+                <th>SubTotal: ${lineItems && calcSubtotal(lineItems)}</th>
               </tr>
             </tfoot>
             <tbody>
@@ -88,31 +69,48 @@ export default function Cart (): JSX.Element {
                 //@ts-ignore: shopify has bad types
                 variant,
                 title,
-                linePrice,
-                price,
+                // linePrice,
+                // price,
                 quantity,
               }) => {
                 const product = getProduct(variant.id as string)
                 return(
                   <tr key={id}>
                     <td>
-                      {product && <Image src={product.img} width={100} height={100}/>}
+                      <Link href={`/product/${product?.slug}`}>
+                        {product && <Image src={product.img} width={100} height={100}/>}
+                      </Link>
                     </td>
-                    <td>{product?.name || title}</td>
                     <td>
-                      <span className="quantity fas fa-plus" onClick={() => increaseQuantity()}>
+                      <Link href={`/product/${product?.slug}`}>
+                        {product?.name || title}
+                      </Link>
+                    </td>
+                    <td>
+                      <span className="quantity fas fa-plus" onClick={() => updateQuantity(id as string, (quantity+1))}>
                         <span className="icon-label">Increase quantity</span>
                       </span>
                       <span>{quantity}</span>
-                      <span className=" quantity fas fa-minus" onClick={() => decreaseQuantity()}>
+                      <span className=" quantity fas fa-minus" onClick={() => updateQuantity(id as string, (quantity-1))}>
                         <span className="icon-label">Decrease quantity</span>
                       </span>
                     </td>
+                    <td><sub>${variant.price}/each</sub></td>
                     <td>${parseFloat(variant.price) * quantity}</td>
                   </tr>
                 )
               })}
-              {calculateShipping(cart)}
+              <tr>
+                <td></td>
+                <td>Shipping</td>
+                <td>
+                  {lineItems && calcBoxes(lineItems)} boxes
+                </td>
+                <td><sup>$15/box (holds 5 bottles)</sup></td>
+                <td>
+                  ${lineItems && calcBoxes(lineItems)*15}
+                </td>
+              </tr>
             </tbody>
           </table>
           <div style={{textAlign: 'right'}}>
@@ -130,28 +128,3 @@ export default function Cart (): JSX.Element {
     </>
   )
 }
-
-const mockCart2: {product: Product, quantity: number}[] = [
-  {
-    product: allProducts[1],
-    quantity: 4
-  },
-  {
-    product: allProducts[0],
-    quantity: 2
-  },
-]
-
-// const mockCart:  {itemSlug: string, quantity: number, price: number}[] = [
-//   {
-//     //this will actually be shoppifyID, after they're added
-//     itemSlug: "garlic-olive-oil",
-//     quantity: 2,
-//     price: 20,
-//   },
-//   {
-//     itemSlug: "lemon-olive-oil",
-//     quantity: 3,
-//     price: 20,
-//   },
-// ]

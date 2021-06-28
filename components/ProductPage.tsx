@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { Product } from '../types/Product'
 import recipes from '../data/recipes'
 import { useCart } from '../services/shopify'
+import allProducts from '../data/products/'
+import _template from '../data/products/_template'
 
 import SwiperProducts from "../components/SwiperProducts"
 // todo: replace with lookupProducts,(filter over relevant recipes)
@@ -24,9 +26,13 @@ function checkImg (image: string): JSX.Element {
   }
 }
 
-export default function ProductPage ({ product }: { product: Product }): JSX.Element {
+export default function ProductPage (): JSX.Element {
   const { addProduct } = useCart()
 
+  let product = _template
+  if(typeof window != "undefined") {
+    product = allProducts.find((product: Product) => product.slug === window.location.pathname.replace("/product/", "").replace("/recipe/", "")) as Product
+  }
   return (
     <section id="main">
 
@@ -52,7 +58,7 @@ export default function ProductPage ({ product }: { product: Product }): JSX.Ele
                 <li>
                   <button
                     className="button icon solid fa-plus"
-                    onClick={() => {addProduct(product.shopifyId, 1)}}
+                    onClick={() => {addProduct([{shopifyId: product.shopifyId, quantity: 1}])}}
                   >
                     Add to cart
                   </button>

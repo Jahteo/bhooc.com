@@ -3,6 +3,7 @@ import { ProductSlugs } from './ProductSlugs'
 export interface Product {
   slug: ProductSlugs;
   name: string;
+  shortName: string;
   description: string;
   price: number;
   img: string;
@@ -10,5 +11,5 @@ export interface Product {
   nutritionImg: string;
   shopifyId: string;
 
-  pairings: string[];
+  pairings: ProductSlugs[];
 }

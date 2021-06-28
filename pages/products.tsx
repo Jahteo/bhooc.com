@@ -3,6 +3,7 @@ import React from "react"
 // import Link from "next/link"
 import SwiperProducts from "../components/SwiperProducts";
 import oils from '../data/products/oils'
+import vinegars from '../data/products/vinegars'
 
 
 export default function products({ children }: { children: React.ReactNode }): JSX.Element {
@@ -23,7 +24,7 @@ export default function products({ children }: { children: React.ReactNode }): J
               {/* <SwiperProducts slides={oilSlides}></SwiperProducts> */}
               <ul className="actions">
                 <li><a href="#" className="button icon solid">See all oils</a></li>
-                <li><a href="/product/garlic-olive-oil" className="button icon solid">See Garlic Oil</a></li>
+                {/* <li><a href="/product/garlic-olive-oil" className="button icon solid">See Garlic Oil</a></li> */}
               </ul>
             </article>
 
@@ -31,7 +32,7 @@ export default function products({ children }: { children: React.ReactNode }): J
               <header>
                 <h2><strong>Vinegars</strong></h2>
               </header>
-              <SwiperProducts slides={oils}></SwiperProducts>
+              <SwiperProducts slides={vinegars}></SwiperProducts>
               <ul className="actions">
                 <li><a href="#" className="button icon solid">See all vinegars</a></li>
               </ul>
@@ -41,20 +42,22 @@ export default function products({ children }: { children: React.ReactNode }): J
               <header>
                 <h2><strong>Pairings</strong></h2>
               </header>
-              <SwiperProducts slides={oils}></SwiperProducts>
+              <h3>Coming soon</h3>
+              {/* <SwiperProducts slides={oils}></SwiperProducts>
               <ul className="actions">
                 <li><a href="#" className="button icon solid">See all pairings</a></li>
-              </ul>
+              </ul> */}
             </article>
 
             <article className="box post">
               <header>
                 <h2><strong>Gifts</strong></h2>
               </header>
-              <SwiperProducts slides={oils}></SwiperProducts>
+              <h3>Coming Soon</h3>
+              {/* <SwiperProducts slides={oils}></SwiperProducts>
               <ul className="actions">
                 <li><a href="#" className="button icon solid">See all gifts</a></li>
-              </ul>
+              </ul> */}
             </article>
 
           </div>

@@ -56,17 +56,47 @@ export function useLineitems(): Client.LineItem[] | undefined {
 //data stored on checkout
 
 export function useCart(): {
-  addProduct: (variantId: string, quantity: number) => Promise<void>
+  // addProduct: (variantId: string, quantity: number) => Promise<void>
+  addProduct: (prodList: {shopifyId: string, quantity: number}[]) => Promise<void>[]
+  updateQuantity: (lineItemId: string, quantity: number) => Promise<void>
+  deleteProduct: (lineItemtId: string) => Promise<void>
   pay: () => void
   } {
   const { checkout, setCheckout } = useContext(Context) || {}
 
-  const addProduct = (shopifyId: string, quantity: number) => {
+  const addProduct = (
+    // shopifyId: string, quantity: number
+    // | {shopifyId: string, quantity: number}[]
+    prodList: {shopifyId: string, quantity: number}[]
+  ) => {
+    if(!checkout || !prodList) {
+      throw new Error("No Checkout")
+    }
+    // return client.checkout.addLineItems(checkout.id, [{variantId: shopifyId, quantity}]).then(res => {
+    //   setCheckout && setCheckout(res)
+    // });
+    //now if adding multiple items,
+    return prodList.map(({shopifyId, quantity}) => {
+      return client.checkout.addLineItems(checkout.id, [{variantId: shopifyId, quantity}]).then(res => {
+        setCheckout && setCheckout(res)
+      });
+    })
+  }
+
+  const updateQuantity = (lineItemId: string, quantity: number) => {
     if(!checkout) {
       throw new Error("No Checkout")
     }
+    return client.checkout.updateLineItems(checkout.id, [{id: lineItemId, quantity}]).then(res => {
+      setCheckout && setCheckout(res)
+    });
+  }
 
-    return client.checkout.addLineItems(checkout.id, [{variantId: shopifyId, quantity}]).then(res => {
+  const deleteProduct = (lineItemId: string) => {
+    if(!checkout) {
+      throw new Error("No Checkout")
+    }
+    return client.checkout.removeLineItems(checkout.id, [lineItemId]).then(res => {
       setCheckout && setCheckout(res)
     });
   }
@@ -80,5 +110,5 @@ export function useCart(): {
     window.open(checkout.webUrl)
   }
 
-  return { addProduct, pay }
+  return { addProduct, updateQuantity, deleteProduct, pay }
 }

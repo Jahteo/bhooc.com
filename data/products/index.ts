@@ -4,11 +4,9 @@ import type { Product } from '../../types/Product'
 // import garlicOil from './garlicOil'
 // import lemonOil from './lemonOil'
 import oils from './oils'
+import vinegars from './vinegars'
 
 const products: Product[] =
-  // garlicOil,
-  // lemonOil,
-  oils
-
+  oils.concat(vinegars)
 
 export default products

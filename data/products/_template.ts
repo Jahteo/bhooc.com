@@ -4,6 +4,7 @@ const product: Product = {
   shopifyId: "",
   slug: "",
   name: "",
+  shortName: "",
   description: "",
   price: 0,
   img: "",

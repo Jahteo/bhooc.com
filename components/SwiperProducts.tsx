@@ -40,7 +40,7 @@ export default function SwiperProducts({slides}: {slides: Product[] | Recipe[] }
         preventClicksPropagation={false}
         // spaceBetween={30}
         // slidesPerView={5}
-        mousewheel={true}
+        // mousewheel={true}
         // height={200}
         // autoHeight={true}
         // When cssMode enabled it will use modern CSS Scroll Snap API. It doesn't support all of Swiper's features, but potentially should bring a much better performance in simple configurations.
