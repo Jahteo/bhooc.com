@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDczMTc2Mjg2Mw==",
   slug: "baklouti-olive-oil",
   name: "Baklouti Chili Pepper Olive Oil",
   shortName: "Baklouti Chili Oil",

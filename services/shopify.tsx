@@ -12,12 +12,12 @@ const client = Client.buildClient({
   domain: 'bhooclite.myshopify.com'
 });
 
-// client.product.fetchAll().then((res) => {
-//   console.log(res.map((product) => [
-//     product.title,
-//     product.variants[0].id
-//   ]))
-// });
+client.product.fetchAll(200).then((res) => {
+  console.log(res.map((product) => [
+    product.title,
+    product.variants[0].id
+  ]))
+});
 
 export const ShopifyProvider = ({children}: {children: React.ReactNode}): JSX.Element => {
   const [checkout, setCheckout] = useState<ShopifyBuy.Cart>()

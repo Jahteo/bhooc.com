@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDc3NDY4ODk0Mw==",
   slug: "dill-olive-oil",
   name: "Wild Fernleaf Dill Olive Oil",
   shortName: "Dill Oil",

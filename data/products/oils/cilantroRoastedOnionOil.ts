@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDc3NDEzMTg4Nw==",
   slug: "cilantro-roasted-onion-olive-oil",
   name: "Cilantro & Roasted Onion Olive Oil",
   shortName: "Cilantro Roasted Onion Oil",

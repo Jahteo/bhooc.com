@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDc3MzAxNzc3NQ==",
   slug: "chipotle-olive-oil",
   name: "Chipotle Olive Oil",
   shortName: "Chipotle Oil",

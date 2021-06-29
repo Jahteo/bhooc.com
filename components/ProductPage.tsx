@@ -29,6 +29,7 @@ function checkImg (image: string): JSX.Element {
 export default function ProductPage (): JSX.Element {
   const { addProduct } = useCart()
 
+  //passing product as a prop fails when refreshing page. solution was to pull product from url, with the caveat that nextjs's ssr doesn't have a window.
   let product = _template
   if(typeof window != "undefined") {
     product = allProducts.find((product: Product) => product.slug === window.location.pathname.replace("/product/", "").replace("/recipe/", "")) as Product
