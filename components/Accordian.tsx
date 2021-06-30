@@ -15,11 +15,12 @@ export default function Accordian (): JSX.Element {
       acc.classList.toggle("active");
       const panel = acc.nextElementSibling as Element;
 
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
+      // why does ts insist that Element has no .style???
+    //   if (panel.style.maxHeight) {
+    //     panel.style.maxHeight = null;
+    //   } else {
+    //     panel.style.maxHeight = panel.scrollHeight + "px";
+    //   }
     });
   }
 
