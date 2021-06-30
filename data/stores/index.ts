@@ -4,7 +4,7 @@ import foghornTheme from './foghorn'
 
 let theme = foghornTheme
 if(typeof window != "undefined") {
-  if (window.location.pathname.includes("bighorn")){
+  if (window.location.pathname.includes("bhooc")){
     theme = bighornTheme
     //TODO: still needs to magically switch favicon & ThemeColors.
   }
