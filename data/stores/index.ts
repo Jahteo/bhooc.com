@@ -1,7 +1,14 @@
 //also, switch favicon & ThemeColors
-
-// import bighornTheme from './bighorn'
-// export default bighornTheme
-
+import bighornTheme from './bighorn'
 import foghornTheme from './foghorn'
-export default foghornTheme
+
+let theme = foghornTheme
+if(typeof window != "undefined") {
+  if (window.location.pathname.includes("bighorn")){
+    theme = bighornTheme
+    //TODO: still needs to magically switch favicon & ThemeColors.
+  }
+
+}
+
+export default theme
