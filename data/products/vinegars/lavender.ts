@@ -7,7 +7,7 @@ const product: Product = {
   shortName: "Lavender Balsamic",
   description: "Floral, sweet and slightly herbaceous, our Lavender Balsamic Vinegar captures the essence of this ancient flower. Pair with chicken, lamb, vegetables, or use in vinaigrettes, over ice cream and with fresh fruits and berries.",
   price: 20,
-  img: "/images/products/lavender.png",
+  img: "/images/products/genericGrapes.png",
   ingredients: "Grape must, wine vinegar, natural flavors, naturally occurring sulfites. No caramel color or additional ingredients. Less than 4% acidity.",
   nutritionImg: "",
 

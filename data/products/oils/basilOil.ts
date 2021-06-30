@@ -4,7 +4,7 @@ const product: Product = {
   shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDczNTA3MjQzMQ==",
   slug: "basil-olive-oil",
   name: "Basil Olive Oil",
-  shortName: "Basil Oil",
+  shortName: "Basil",
   description: "Fresh, bright and herbaceous basil - this amazing infusion is made from Certified Ultra Premium Olive Oil infused with essential flavor of basil oil. Fantastic anywhere you’d like the fresh herbaceous flavor of basil. Use in marinades, salads, for bread dipping, brushed on vegetables, with poultry, and more. Try it on a summer salad or caprese and let your taste buds travel to the shores of the Mediterranean.",
   price: 20,
   img: "/images/products/basil.png",

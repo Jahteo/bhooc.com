@@ -4,7 +4,7 @@ const product: Product = {
   shopifyId: "",
   slug: "toasted-sesame-oil",
   name: "Japanese Toasted Sesame Oil",
-  shortName: "Toasted Sesame Oil",
+  shortName: "Toasted Sesame",
   description: "Our Japanese dark toasted sesame oil is made from high quality sesame seeds roasted slowly under low temperature, and then pressed in small batches in Japan in the traditional style. It has tremendous depth of flavor and mouth-feel. Use with vegetables, in stir fry, baking, marinades, grilled meats, poultry, hummus, dressings and spreads.",
   price: 20,
   img: "/images/products/toastedSesame.png",

@@ -7,7 +7,7 @@ const product: Product = {
   shortName: "Tangerine Balsamic",
   description: "Our aged and infused Tangerine Balsamic is citrusy and complex. Use this tart/sweet condimento with poultry, an Asian inspired dipping sauce, dressings, marinades, cheese plates, over yogurt, fruit salad and warm chocolate brownies.",
   price: 20,
-  img: "/images/products/tangerine.png",
+  img: "/images/products/genericGrapes.png",
   ingredients: "Grape must, wine vinegar, natural flavors, naturally occurring sulfites. No caramel color or additional ingredients. Less than 4% acidity.",
   nutritionImg: "",
 

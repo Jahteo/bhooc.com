@@ -7,7 +7,7 @@ const product: Product = {
   shortName: "Sherry Vinegar",
   description: "From Jerez, Spain and made in the traditional Solera system, our Sherry Reserva 25 year aged Wine Vinegar, has a true sherry flavor that can only come from cask-aging. This fine Spanish vinegar is fabulous in reduction sauces, glazes and whenever strength and depth of flavor is desired.",
   price: 15,
-  img: "/images/products/sherryVinegar.png",
+  img: "/images/products/genericGrapes.png",
   ingredients: "Grape must, wine vinegar, natural flavors, naturally occurring sulfites. No caramel color or additional ingredients. Less than 4% acidity.",
   nutritionImg: "",
 

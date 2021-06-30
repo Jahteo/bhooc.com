@@ -4,7 +4,7 @@ const product: Product = {
   shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDc3NDEzMTg4Nw==",
   slug: "cilantro-roasted-onion-olive-oil",
   name: "Cilantro & Roasted Onion Olive Oil",
-  shortName: "Cilantro Roasted Onion Oil",
+  shortName: "Cilantro Roasted Onion",
   description: "Made with Certified Ultra Premium Extra Virgin Olive Oil, this savory infused oil masterfully blends the flavor of roasted, sweet, caramelized onions with fresh, herbaceous cilantro. It’s fantastic for marinating poultry or meat for fajitas, for drizzling over vegetables, grilling, saut ing, in salsa, and more.",
   price: 20,
   img: "/images/products/cilantroRoastedOnion.png",

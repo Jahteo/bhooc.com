@@ -4,7 +4,7 @@ const product: Product = {
   shopifyId: "",
   slug: "peppercorn-olive-oil",
   name: "Madagascar Black Peppercorn Olive Oil",
-  shortName: "Peppercorn Olive Oil",
+  shortName: "Peppercorn",
   description: "Spicy and floral with notes of fresh ground peppercorn and a lingering, tingly Szechuan peppercorn finish. Great for marinades, dressings, aioli, saut ing, and over ice cream. Try it in a cream based dish, or in a salad for a nice peppery zing. Amazing on popcorn, with creamy pasta, and seafood. Create that amazing peppercorn flavor in your favorite dishes without having to use fresh peppercorns!",
   price: 20,
   img: "/images/products/peppercorn.png",

@@ -7,7 +7,7 @@ const product: Product = {
   shortName: "Elderberry Balsamic",
   description: "Tart, rich and sweet, our Elderberry Dark Balsamic Vinegar is a taste sensation with zesty hints of juicy purple Elderberry. Used in marinades, shrubs, dressings, glazes, desserts, with fruit, and in baking. It has a sensational flavor profile",
   price: 20,
-  img: "/images/products/elderberry",
+  img: "/images/products/genericGrapes.png",
   ingredients: "Grape must, wine vinegar, natural flavors, naturally occurring sulfites. No caramel color or additional ingredients. Less than 4% acidity.",
   nutritionImg: "",
 

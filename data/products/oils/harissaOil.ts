@@ -4,7 +4,7 @@ const product: Product = {
   shopifyId: "",
   slug: "harissa-olive-oil",
   name: "Harissa Olive Oil",
-  shortName: "Harissa Oil",
+  shortName: "Harissa",
   description: "Traditionally used in North Africa and the Middle Eastern Cuisines, Harissa is a condiment which is made from dried hot chili peppers, garlic, toasted caraway, toasted coriander, and toasted cumin then pounded into a paste with olive oil. It is made with Certified Ultra Premium Extra Virgin Olive Oil and copious amounts of chili pepper to make our infused olive oil very spicy, and one of the hottest in our collection.",
   price: 20,
   img: "/images/products/harissa.png",

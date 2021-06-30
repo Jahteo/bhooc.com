@@ -4,7 +4,7 @@ const product: Product = {
   shopifyId: "",
   slug: "herbes-de-provence-olive-oil",
   name: "Herbes de Provence Olive Oil",
-  shortName: "Herbes de Provence Oil",
+  shortName: "Herbes de Provence",
   description: "Made with Certified Ultra Premium Extra Virgin Olive Oil, this classic Provencal herbal combination includes notes of lavender, rosemary, savory, thyme, and bay leaf. It’s a show stopper drizzled over grilled lamb, chicken, used in marinades, brushed on vegetables to be roasted or grilled, brushed on turkey before roasting, for bread dipping, or in aioli.",
   price: 20,
   img: "/images/products/herbesDeProvence.png",
