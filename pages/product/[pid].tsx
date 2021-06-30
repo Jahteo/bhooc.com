@@ -13,7 +13,7 @@ const ProductRoute = (): JSX.Element => {
   const router = useRouter()
   const { pid } = router.query
   const product: Product = allProducts.find((tempProduct) => tempProduct.slug == pid) as Product
-  return <><ProductPage product={product}/></>
+  return <ProductPage />
 }
 
 export default ProductRoute

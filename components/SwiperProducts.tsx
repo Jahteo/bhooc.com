@@ -19,15 +19,15 @@ function LinkOrImg (image: string): JSX.Element {
     return <Image src={image} height={200} width={200} layout="responsive"></Image>
   }
 }
-function LinkHref (slug: string, price: number) {
-  if (price == -1) {
+function LinkHref (slug: string, urlType: string) {
+  if (urlType === "recipe") {
     return `/recipe/${slug}`
   } else {
     return `/product/${slug}`
   }
 }
 
-export default function SwiperProducts({slides}: {slides: Product[] | Recipe[] }
+export default function SwiperProducts({slides, urlType}: {slides: Product[] | Recipe[], urlType: "recipe" | "product" }
 ) : JSX.Element {
   // const slideType = typeof(slides[0])
   return (
@@ -72,11 +72,7 @@ export default function SwiperProducts({slides}: {slides: Product[] | Recipe[] }
                 // backgroundImage: `url(${img})`,
                 height: "200px"
               }}>
-              {/* {slideType == "Recipe"} */}
-              {/* {openLink(slug, price))} */}
-              {/* <Link href={LinkHref(slide.slug, (slide.price ? slide.price : -1))} passHref> */}
-              <Link href={LinkHref(slide.slug, (slide.price || -1))} passHref>
-                {/* <Link href={`/product/${slug}`} passHref> */}
+              <Link href={LinkHref(slide.slug, urlType)} passHref>
                 <a>
                   {LinkOrImg(slide.img)}
                   <h3>{slide.name}</h3>

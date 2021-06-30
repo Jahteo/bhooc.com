@@ -4,6 +4,7 @@ import React from "react"
 import SwiperProducts from "../components/SwiperProducts";
 import oils from '../data/products/oils'
 import vinegars from '../data/products/vinegars'
+// import Accordian from "../components/Accordian";
 
 
 export default function products({ children }: { children: React.ReactNode }): JSX.Element {
@@ -14,17 +15,19 @@ export default function products({ children }: { children: React.ReactNode }): J
         <div className="container">
           <div id="content">
 
-            <h2>SearchBar here</h2>
+            {/* <h2>SearchBar here</h2> */}
+            {/* <Accordian ></Accordian> */}
 
             <article className="box post">
               <header>
                 <h2><strong>Olive Oils</strong></h2>
               </header>
-              <SwiperProducts slides={oils}></SwiperProducts>
-              {/* <SwiperProducts slides={oilSlides}></SwiperProducts> */}
+              <SwiperProducts
+                slides={oils}
+                urlType="product"
+              />
               <ul className="actions">
-                <li><a href="#" className="button icon solid">See all oils</a></li>
-                {/* <li><a href="/product/garlic-olive-oil" className="button icon solid">See Garlic Oil</a></li> */}
+                <li><a href="/oils" className="button icon solid">See all oils</a></li>
               </ul>
             </article>
 
@@ -32,9 +35,12 @@ export default function products({ children }: { children: React.ReactNode }): J
               <header>
                 <h2><strong>Vinegars</strong></h2>
               </header>
-              <SwiperProducts slides={vinegars}></SwiperProducts>
+              <SwiperProducts
+                slides={vinegars}
+                urlType="product"
+              />
               <ul className="actions">
-                <li><a href="#" className="button icon solid">See all vinegars</a></li>
+                <li><a href="/vinegars" className="button icon solid">See all vinegars</a></li>
               </ul>
             </article>
 

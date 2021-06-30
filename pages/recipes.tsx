@@ -15,7 +15,8 @@ export default function recipes({ children }: { children: React.ReactNode }): JS
         <div className="container">
           <div id="content">
 
-            <h2>SearchBar here</h2>
+            {/* <h2>SearchBar here</h2> */}
+            <h2>More Recipes coming soon</h2>
 
             <article className="box post">
               <header>

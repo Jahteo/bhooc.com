@@ -59,7 +59,7 @@ export default function ProductPage (): JSX.Element {
                 <li>
                   <button
                     className="button icon solid fa-plus"
-                    onClick={() => {addProduct([{shopifyId: product.shopifyId, quantity: 1}])}}
+                    onClick={() => addProduct(product.shopifyId, 1)}
                   >
                     Add to cart
                   </button>
@@ -97,7 +97,10 @@ export default function ProductPage (): JSX.Element {
             <article className="box excerpt alt">
               <header>
                 <h2>Recipes:</h2>
-                <SwiperProducts slides={relevantRecipes(product)}/>
+                <SwiperProducts
+                  slides={relevantRecipes(product)}
+                  urlType="recipe"
+                />
               </header>
             </article>
           </div>

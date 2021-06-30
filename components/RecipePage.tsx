@@ -5,8 +5,9 @@ import { Product } from '../types/Product'
 import { Recipe } from '../types/Recipe'
 // import recipes from '../data/recipes'
 import allProducts from '../data/products'
+import { useCart } from '../services/shopify'
 
-import SwiperNoNav from "./SwiperNoNav"
+// import SwiperNoNav from "./SwiperNoNav"
 // function prettifyName(str: string) {
 //   return str.replace(/-/g, " ").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 // }
@@ -20,6 +21,8 @@ function checkImg (image: string): JSX.Element {
 }
 
 export default function RecipePage ({ recipe }: { recipe: Recipe }): JSX.Element {
+  const { addProduct } = useCart()
+
   function buildProdList (recipe: Recipe) {
     const prodList: Product[] = []
     allProducts.map((product) => {
@@ -57,7 +60,13 @@ export default function RecipePage ({ recipe }: { recipe: Recipe }): JSX.Element
                       <Image src={prod.img} width="150" height="150" alt={prod.name}/>
                       {/* {prod.name} */}
                     </a></Link></li>
-                    <li><a href="#" className="button icon solid fa-plus">Add to cart</a></li>
+                    <li>
+                      <button
+                        onClick={() => {addProduct(prod.shopifyId, 1)}}
+                        className="button icon solid fa-plus">
+                          Add to cart
+                      </button>
+                    </li>
                     {/* <br/> */}
                   </ul>
                 </>)

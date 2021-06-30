@@ -1,5 +1,5 @@
 import React from 'react'
-import bighornTheme from '../data/stores/bighornTheme'
+// import bighornTheme from '../data/stores/bighornTheme'
 import allProducts from '../data/products'
 import Image from 'next/image'
 import { useLineitems, useCart } from '../services/shopify'
@@ -38,11 +38,13 @@ export default function Cart (): JSX.Element {
     <>
       <section id="main">
         <div className="container">
-          <h2 style={{
-            backgroundColor: bighornTheme.color,
-            padding: "20px",
-            color: "black"
-          }}>
+          <h2 className="cart-header"
+          // style={{
+          //   backgroundColor: bighornTheme.color,
+          //   padding: "20px",
+          //   color: "black"
+          // }}
+          >
             Your Cart
           </h2>
           <table>

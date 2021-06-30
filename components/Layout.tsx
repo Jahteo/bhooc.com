@@ -2,16 +2,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
-
-// init layout if using styles.containter from layout.module.css = NEXTJS REFERENCE
-// export default function Layout({ children }: any) {
-//   return <div className={styles.container}>{children}</div>
-// }
-
-//fast setup for a blank layout - TEMP
-// export default function Layout({ children }: any) {
-//   return <div>{children}</div>
-// }
+import store from "../data/stores"
+import { useCartCount } from '../services/shopify'
 
 //statically generated - REFERENCE
 // export async function getStaticProps() {
@@ -49,11 +41,11 @@ const navList = [
     label: 'Vinegars',
     nest: 1,
   },
-  {
-    to: '/gifts',
-    label: 'Gifts',
-    nest: 0,
-  },
+  // {
+  //   to: '/gifts',
+  //   label: 'Gifts',
+  //   nest: 0,
+  // },
   {
     to: '/recipes',
     label: 'Recipes',
@@ -67,11 +59,11 @@ const learnMoreLinks = [
     label: 'About Us',
     nest: 0,
   },
-  {
-    to: '/faq',
-    label: 'Faq',
-    nest: 0,
-  },
+  // {
+  //   to: '/faq',
+  //   label: 'Faq',
+  //   nest: 0,
+  // },
   {
     to: '/shipping',
     label: 'Shipping',
@@ -80,7 +72,6 @@ const learnMoreLinks = [
 ]
 
 const openSidebar = () => {
-  // document.body.classList.add('navPanel-visible')
   if (document.body.classList.contains('navPanel-visible')) {
     return
   }
@@ -128,6 +119,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
   // useEffect(() => {
   //   closeSidebar()
   // })
+  const cartCount = useCartCount()
 
   return (
     // Setup Mobile Menu
@@ -146,24 +138,28 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
       <section id="header">
         <div className="container">
           <h1>
-            <a href="/">Bighorn Olive Oil</a>
+            <a href="/">{store.storeName}</a>
           </h1>
           {/* <p>The freshest and best single-sourced olive oils and balsamic vinegars in the world!</p> */}
           <ul className="alt">
-            <li>
+            {/* <li>
               <a className="icon alt solid fas fa-search">
                 <div className="label">Search</div>
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a className="icon alt solid fas fa-user">
                 <div className="label">My Account</div>
               </a>
-            </li>
+            </li> */}
             <li>
               <Link href="/cart">
                 <a className="icon alt solid fas fa-shopping-cart">
                   <div className="label">Shopping Cart</div>
+                  {cartCount?
+                    <span className='badge badge-warning' id='lblCartCount'> {cartCount} </span>
+                    : null}
+
                 </a>
               </Link>
             </li>
@@ -212,7 +208,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
 
                           {/* // Todo: fix column spacing so this never overlaps */}
                           <a href="mailto:BHOOCMedia@gmail.com">
-                            bhoocmedia@gmail.com
+                            bhoocmedia<br/>@gmail.com
                           </a>
                           <br/>
                           <a
@@ -259,7 +255,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
                       <section>
                         <Image
                           priority
-                          src="/images/BHLogo.jpeg"
+                          src="/images/FHLogo.png"
                           // className={utilStyles.borderCircle}
                           height={144}
                           width={144}
@@ -275,7 +271,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
                           <a href="tel:1-360-477-4171">(360) 477-4171</a>
                           <br />
                           <a href="mailto:foghornpa@gmail.com">
-                            foghornpa@gmail.com
+                            foghornpa<br/>@gmail.com
                           </a>
                           <br />
                           <a
@@ -326,7 +322,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
             <div className="col-6 col-12-medium">
               <section>
                 <h2>
-                  Questions or comments? <br/><strong>Call us at (775) 870-1500.</strong>{" "}
+                  Questions or comments? <br/><strong>Call us at {store.phone}.</strong>{" "}
                 </h2>
                 <hr className="double-line footer-grey"/>
                 <div className="row aln-left">
@@ -362,14 +358,14 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
             <li>
               <span>Review us on Google & Yelp:    </span>
               <a className="icon alt brands fa-google"
-                href="https://search.google.com/local/writereview?placeid=ChIJp3uIxElBmYARFLc1UzeWabs"
+                href={store.googleReview}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="label"> Google </span>
               </a>
               <a className="icon alt brands fa-yelp"
-                href="https://www.yelp.com/writeareview/biz/OgO5i4haAsLP2f2d2pC8OQ?return_url=%2Fbiz%2FOgO5i4haAsLP2f2d2pC8OQ&source=biz_details_war_button"
+                href={store.yelpReview}
                 target="_blank"
                 rel="noopener noreferrer"
               >

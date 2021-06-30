@@ -6,6 +6,7 @@ import { Product } from '../types/Product'
 // import GarlicOliveOil from './product/garlic-olive-oil2'
 import allProducts from '../data/products'
 import { ProductSlugs } from '../types/ProductSlugs'
+import store from '../data/stores'
 
 
 // import Layout, { siteTitle } from '../components/layout'
@@ -32,6 +33,11 @@ import { ProductSlugs } from '../types/ProductSlugs'
 //     }
 //   }
 // }
+const imgSlides = [
+  {url: 'https://source.unsplash.com/1600x900/?olive,oil', header: "What's for dinner?", text: "Check out all our recipes"},
+  {url: 'https://source.unsplash.com/1600x900/?olive,tree', header: "Location, Location, Location", text: "Where do our olive oils come from?"},
+  {url: 'https://source.unsplash.com/1600x900/?grapes', header: "Grapes & Barrels", text: "Baslamic making 101"}
+];
 
 export default function Home(): JSX.Element {
   return (
@@ -40,8 +46,8 @@ export default function Home(): JSX.Element {
         <title>Home</title>
       </Head>
 
-      {/* <Slideshow ImgSlide={imgSlides}/> */}
-      <Slideshow/>
+      {/* <Slideshow/> */}
+      <Slideshow imgSlides={store.bannerSlides}/>
 
       <RecentRecipes recipes={allRecipes}/>
       <section id="features">

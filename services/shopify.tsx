@@ -12,12 +12,12 @@ const client = Client.buildClient({
   domain: 'bhooclite.myshopify.com'
 });
 
-client.product.fetchAll(200).then((res) => {
-  console.log(res.map((product) => [
-    product.title,
-    product.variants[0].id
-  ]))
-});
+// client.product.fetchAll(200).then((res) => {
+//   console.log(res.map((product) => [
+//     product.title,
+//     product.variants[0].id
+//   ]))
+// });
 
 export const ShopifyProvider = ({children}: {children: React.ReactNode}): JSX.Element => {
   const [checkout, setCheckout] = useState<ShopifyBuy.Cart>()
@@ -52,12 +52,21 @@ export function useLineitems(): Client.LineItem[] | undefined {
   const { checkout } = useContext(Context) || {}
   return checkout?.lineItems
 }
+
+export function useCartCount(): number | undefined {
+  const { checkout } = useContext(Context) || {}
+  const reducer = (accumulator: number, item: {quantity: number}) => {
+    // console.log("item", item.quantity)
+    return accumulator + item.quantity
+  }
+  return checkout && checkout.lineItems.reduce(reducer, 0)
+}
 //functions stored on client.checkout
 //data stored on checkout
 
 export function useCart(): {
-  // addProduct: (variantId: string, quantity: number) => Promise<void>
-  addProduct: (prodList: {shopifyId: string, quantity: number}[]) => Promise<void>[]
+  addProduct: (variantId: string, quantity: number) => Promise<void>
+  // addProduct: (prodList: {shopifyId: string, quantity: number}[]) => Promise<void>[]
   updateQuantity: (lineItemId: string, quantity: number) => Promise<void>
   deleteProduct: (lineItemtId: string) => Promise<void>
   pay: () => void
@@ -65,22 +74,24 @@ export function useCart(): {
   const { checkout, setCheckout } = useContext(Context) || {}
 
   const addProduct = (
-    // shopifyId: string, quantity: number
+    shopifyId: string, quantity: number
     // | {shopifyId: string, quantity: number}[]
-    prodList: {shopifyId: string, quantity: number}[]
+    // prodList: {shopifyId: string, quantity: number}[]
   ) => {
-    if(!checkout || !prodList) {
+    if(!checkout) {
+    // if(!checkout || !prodList) {
       throw new Error("No Checkout")
     }
-    // return client.checkout.addLineItems(checkout.id, [{variantId: shopifyId, quantity}]).then(res => {
-    //   setCheckout && setCheckout(res)
-    // });
+    // console.log(shopifyId, quantity)
+    return client.checkout.addLineItems(checkout.id, [{variantId: shopifyId, quantity}]).then(res => {
+      setCheckout && setCheckout(res)
+    });
     //now if adding multiple items,
-    return prodList.map(({shopifyId, quantity}) => {
-      return client.checkout.addLineItems(checkout.id, [{variantId: shopifyId, quantity}]).then(res => {
-        setCheckout && setCheckout(res)
-      });
-    })
+    // return prodList.map(({shopifyId, quantity}) => {
+    //   return client.checkout.addLineItems(checkout.id, [{variantId: shopifyId, quantity}]).then(res => {
+    //     setCheckout && setCheckout(res)
+    //   });
+    // })
   }
 
   const updateQuantity = (lineItemId: string, quantity: number) => {
