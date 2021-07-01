@@ -3,7 +3,6 @@ import bighornTheme from './bighorn'
 import foghornTheme from './foghorn'
 
 let theme = foghornTheme
-console.log("Outer: window.location.href.includes('bhooc')", window.location.href.includes("bhooc") )
 if(typeof(window) != "undefined") {
   console.log("Middle: window.location.href.includes('bhooc')", window.location.href.includes("bhooc") )
   if (window.location.href.includes("bhooc")){
