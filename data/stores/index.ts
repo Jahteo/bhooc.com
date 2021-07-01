@@ -3,10 +3,11 @@ import bighornTheme from './bighorn'
 import foghornTheme from './foghorn'
 
 let theme = foghornTheme
-console.log(" typeof window != 'undefined'", console.log(typeof window != "undefined") )
-console.log(" typeof(window) != 'undefined'", console.log(typeof(window) != "undefined") )
+console.log("Outer: window.location.href.includes('bhooc')", window.location.href.includes("bhooc") )
 if(typeof(window) != "undefined") {
-  if (window.location.pathname.includes("bhooc")){
+  console.log("Middle: window.location.href.includes('bhooc')", window.location.href.includes("bhooc") )
+  if (window.location.href.includes("bhooc")){
+    console.log("Inner: window.location.href.includes('bhooc')", window.location.href.includes("bhooc") )
     console.log("aha, it worked at least this far!!!")
     theme = bighornTheme
     //TODO: still needs to magically switch favicon & ThemeColors.
