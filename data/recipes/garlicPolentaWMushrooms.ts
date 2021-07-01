@@ -3,7 +3,7 @@ import { Recipe } from '../../types/Recipe'
 const recipe: Recipe = {
   slug: "grilled-garlic-polenta-with-wild-mushrooms",
   name: "Grilled Garlic Polenta Rounds with Wild Mushrooms",
-  img: "",
+  img: "/images/recipes/noRecipeImg.jpg",
   ingredients: [
     "1 Tbs. Garlic Olive Oil",
     "1/4 cup shallots, minced",

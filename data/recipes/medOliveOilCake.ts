@@ -3,7 +3,7 @@ import { Recipe } from '../../types/Recipe'
 const recipe: Recipe = {
   slug: "mediterranean-olive-oil-cake",
   name: "Mediterranean Olive Oil Cake",
-  img: "",
+  img: "/images/recipes/noRecipeImg.jpg",
   ingredients: [
     "1 1/2 cup all-purpose flour",
     "2 tsp Baking powder",

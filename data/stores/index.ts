@@ -3,7 +3,9 @@ import bighornTheme from './bighorn'
 import foghornTheme from './foghorn'
 
 let theme = foghornTheme
-if(typeof window != "undefined") {
+console.log(" typeof window != 'undefined'", console.log(typeof window != "undefined") )
+console.log(" typeof(window) != 'undefined'", console.log(typeof(window) != "undefined") )
+if(typeof(window) != "undefined") {
   if (window.location.pathname.includes("bhooc")){
     console.log("aha, it worked at least this far!!!")
     theme = bighornTheme
