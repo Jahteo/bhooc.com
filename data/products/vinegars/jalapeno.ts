@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDgzODU1Mzc3NQ==",
   slug: "jalapeno-balsamic-vinegar",
   name: "Jalapeño White Balsamic Vinegar",
   shortName: "Jalapeño Balsamic",

@@ -1,7 +1,8 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  //Todo: Check this after removing duplicate
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDc5OTk1MzA3MQ==",
   slug: "black-currant-balsamic-vinegar",
   name: "Black Currant Dark Balsamic Vinegar",
   shortName: "Black Currant Balsamic",

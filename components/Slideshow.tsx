@@ -19,7 +19,7 @@ const Slideshow = ({imgSlides}
       <Slide easing="ease" {...properties}>
         {imgSlides.map(({url, header, text}) => {
           return (
-            <div className="each-slide">
+            <div className="each-slide" key={url}>
               <div style={{
                 backgroundColor: "grey",
                 backgroundImage: `url(${url})`,

@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDg1Nzc1NTgyMw==",
   slug: "red-apple-balsamic-vinegar",
   name: "Red Apple Dark Balsamic Vinegar",
   shortName: "Red Apple Balsamic",

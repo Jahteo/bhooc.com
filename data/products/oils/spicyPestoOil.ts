@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDc4OTkyNjA2Mw==",
   slug: "spicy-pesto-olive-oil",
   name: "Spicy Calabrian Pesto Olive Oil",
   shortName: "Spicy Pesto",

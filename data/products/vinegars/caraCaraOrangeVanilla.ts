@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDgwNDExNDYwNw==",
   slug: "cara-cara-orange-vanilla-balsamic-vinegar",
   name: "Cara Cara Orange Vanilla White Balsamic Vinegar",
   shortName: "Cara Cara Orange Vanilla Balsamic",

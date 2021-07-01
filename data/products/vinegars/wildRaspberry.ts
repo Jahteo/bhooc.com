@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDg2Nzg4MTEzNQ==",
   slug: "wild-raspberry-balsamic-vinegar",
   name: "Cascadian Wild Raspberry White Balsamic Vinegar",
   shortName: "Wild Raspberry Balsamic",

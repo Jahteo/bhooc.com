@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDc5MDg3NjMzNQ==",
   slug: "toasted-sesame-oil",
   name: "Japanese Toasted Sesame Oil",
   shortName: "Toasted Sesame",

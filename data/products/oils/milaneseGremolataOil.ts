@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDc3NzM3NTkxOQ==",
   slug: "milanese-gremolata-olive-oil",
   name: "Milanese Gremolata Olive Oil",
   shortName: "Milanese Gremolata",

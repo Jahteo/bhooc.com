@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDc4NTA0MzYzMQ==",
   slug: "peppercorn-olive-oil",
   name: "Madagascar Black Peppercorn Olive Oil",
   shortName: "Peppercorn",

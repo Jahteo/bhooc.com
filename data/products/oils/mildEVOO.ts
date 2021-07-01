@@ -1,7 +1,7 @@
 import { Product } from '../../../types/Product'
 
 const product: Product = {
-  shopifyId: "",
+  shopifyId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDEyMDc3ODE5NTExOQ==",
   slug: "ultra-premium-mild-evoo",
   name: "Ultra Premium Mild EVOO",
   shortName: "UP Mild EVOO",
