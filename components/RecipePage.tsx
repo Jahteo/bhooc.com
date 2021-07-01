@@ -56,11 +56,11 @@ export default function RecipePage ({ recipe }: { recipe: Recipe }): JSX.Element
               {buildProdList(recipe).map((prod) => {
                 return (<>
                   <ul className="no-bullets inline">
-                    <li><Link href={`/product/${prod.slug}`}><a>
+                    <li key={prod.slug}><Link href={`/product/${prod.slug}`}><a>
                       <Image src={prod.img} width="150" height="150" alt={prod.name}/>
                       {/* {prod.name} */}
                     </a></Link></li>
-                    <li>
+                    <li key={`button-${prod.slug}`}>
                       <button
                         onClick={() => {addProduct(prod.shopifyId, 1)}}
                         className="button icon solid fa-plus">
@@ -83,15 +83,15 @@ export default function RecipePage ({ recipe }: { recipe: Recipe }): JSX.Element
             <h3>Ingredients</h3>
             <ul>
               {recipe.ingredients.map((ingredient) => {
-                return <li>{ingredient}</li>
+                return <li key={`ingredient-${ingredient}`}>{ingredient}</li>
               })}
             </ul>
           </div>
           <div id="content" className="col-8 col-12-medium imp-medium">
             <h3>Directions</h3>
             <ol>
-              {recipe.steps.map((step) => {
-                return <li>{step}</li>
+              {recipe.steps.map((step, i) => {
+                return <li key={i}>{step}</li>
               })}
             </ol>
           </div>
@@ -108,7 +108,13 @@ export default function RecipePage ({ recipe }: { recipe: Recipe }): JSX.Element
                   <h2>Tags:</h2>
                   <ul className="no-bullets">
                     {recipe.categories.map((category) => {
-                      return <li><a href={`recipe/${category}`}><strong>{category}</strong></a></li>
+                      return (
+                        <li key={category}>
+                          <a href={`recipe/${category}`}>
+                            <strong>{category}</strong>
+                          </a>
+                        </li>
+                      )
                     })}
                   </ul>
                 </header>

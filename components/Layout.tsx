@@ -90,28 +90,32 @@ function buildLink(link: {
   to: string,
   label: string,
   nest: number,
-}) {
-  return <li><Link href={link.to}>
-
-    <a className="icon ">
-      <span>{link.label}</span>
-    </a>
-  </Link>
-  </li>
+}): JSX.Element {
+  return (
+    <li key={link.label}>
+      <Link href={link.to}>
+        <a className="icon">
+          <span>{link.label}</span>
+        </a>
+      </Link>
+    </li>
+  )
 }
 
 function buildSideLink(link: {
   to: string,
   label: string,
   nest: number,
-}) {
+}): JSX.Element {
   return (
-    <Link href={link.to}>
-      <a className={`link depth-${link.nest}`}>
-        <span className={`indent-${link.nest}`} />
-        {link.label}
-      </a>
-    </Link>
+    <li key={link.label}>
+      <Link href={link.to}>
+        <a className={`link depth-${link.nest}`}>
+          <span className={`indent-${link.nest}`} />
+          {link.label}
+        </a>
+      </Link>
+    </li>
   )
 }
 
@@ -152,7 +156,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
                 <div className="label">My Account</div>
               </a>
             </li> */}
-            <li>
+            <li key="shoppingCart">
               <Link href="/cart">
                 <a className="icon alt solid fas fa-shopping-cart">
                   <div className="label">Shopping Cart</div>
@@ -205,8 +209,6 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
                           Reno, NV <br />
                           <a href="tel:1-775-870-1500">(775) 870-1500</a>
                           <br />
-
-                          {/* // Todo: fix column spacing so this never overlaps */}
                           <a href="mailto:BHOOCMedia@gmail.com">
                             bhoocmedia<br/>@gmail.com
                           </a>
@@ -227,7 +229,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
                         </p>
 
                         <ul className="alt">
-                          <li>
+                          <li key="bighorn-facebook">
                             <a
                               className="icon alt brands fa-facebook-f"
                               href="https://www.facebook.com/bighornoliveoilcompany"
@@ -237,7 +239,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
                               <div className="label">Facebook</div>
                             </a>
                           </li>
-                          <li >
+                          <li key="bighorn-instagram">
                             <a
                               className="icon alt brands fa-instagram"
                               href="https://www.instagram.com/bighornoliveoilcompany/"
@@ -290,7 +292,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
                         </p>
 
                         <ul className="alt">
-                          <li>
+                          <li key="foghorn-facebook">
                             <a
                               className="icon alt brands fa-facebook-f"
                               href="https://www.facebook.com/foghornoliveoil/"
@@ -332,7 +334,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
                     </header>
                     <ul className="no-bullets">
                       {learnMoreLinks.map((link) => {
-                        return <li>{buildSideLink(link)}</li>
+                        return  buildSideLink(link)
                       })}
                     </ul>
                   </div>
@@ -340,7 +342,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
                     <header><h3>Navigate</h3></header>
                     <ul className="no-bullets">
                       {navList.map((link) => {
-                        return <li>{buildSideLink(link)}</li>
+                        return buildSideLink(link)
                       })}
                     </ul>
                   </div>
@@ -351,11 +353,11 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
         </div>
         <div id="copyright" className="container">
           <ul className="links">
-            <li>&copy; Untitled. All rights reserved.</li>
+            <li key="copyright">&copy; Untitled. All rights reserved.</li>
             <li>
               Design: <a href="http://html5up.net">HTML5 UP</a>
             </li>
-            <li>
+            <li key="googleYelpReviews">
               <span>Review us on Google & Yelp:    </span>
               <a className="icon alt brands fa-google"
                 href={store.googleReview}
