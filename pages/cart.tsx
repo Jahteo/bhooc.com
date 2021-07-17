@@ -26,7 +26,7 @@ function calcSubtotal(lineItems: ShopifyBuy.LineItem[]) {
   }
   //@ts-ignore: shopify's types insist there is no lineItem.variant, which is outdated/wrong
   const productSubtotal: number = lineItems.reduce(reducer, 0)
-  return  productSubtotal + (calcBoxes(lineItems) * 15)
+  return  productSubtotal + (calcBoxes(lineItems) * 20)
 }
 
 export default function Cart (): JSX.Element {
@@ -108,9 +108,9 @@ export default function Cart (): JSX.Element {
                 <td>
                   {lineItems && calcBoxes(lineItems)} boxes
                 </td>
-                <td><sup>$15/box (holds 5 bottles)</sup></td>
+                <td><sup>$20/box (holds 5 bottles)</sup></td>
                 <td>
-                  ${lineItems && calcBoxes(lineItems)*15}
+                  ${lineItems && calcBoxes(lineItems)*20}
                 </td>
               </tr>
             </tbody>
