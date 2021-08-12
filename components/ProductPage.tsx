@@ -85,7 +85,7 @@ export default function ProductPage (): JSX.Element {
                     {product.pairings.map((pair) => {
                       const name = prettifyName(pair)
                       // return <li><a href={`product/${pair}`}><strong>{pair}</strong></a></li>
-                      return <li><a href={`product/${pair}`}><strong>{name}</strong></a></li>
+                      return <li><a href={pair}><strong>{name}</strong></a></li>
                     })}
                   </ul>
                 </header>
