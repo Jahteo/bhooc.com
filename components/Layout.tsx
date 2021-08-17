@@ -286,9 +286,9 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
                         </p>
 
                         <p>
-                          M-Sat 10am-5pm
+                          Tues-Sat 12-5pm
                           <br />
-                          Sun Closed
+                          Sun/Mon Closed
                         </p>
 
                         <ul className="alt">
