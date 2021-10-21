@@ -31,12 +31,11 @@ const recipe: Recipe = {
   ],
   "description": "Grill up and serve this tasty stack with any dish. Tuscan Herb olive oil and Sicilian Lemon white balsamic vinegar shine in this wonderful flavor combo.",
   "categories": [
-    "sides-appetizers"
+    "Sides"
   ],
   "products": [
     "sicilian-lemon-balsamic-vinegar",
     "tuscan-herb-olive-oil",
-    "zucchini-and-eggplant-stack"
   ]
 }
 

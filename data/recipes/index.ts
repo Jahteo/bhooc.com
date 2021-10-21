@@ -2,96 +2,178 @@ import type { Recipe } from '../../types/Recipe'
 //protip: fill imports & products with terminal on folder, then `ls -1` to get list of all files.
 import garlicPolentaWMushrooms from "./garlicPolentaWMushrooms"
 import medOliveOilCake from "./medOliveOilCake"
+import asparagusSaladWithLemonTangerineDressing from "./asparagusSaladWithLemonTangerineDressing"
+import avocadoMangoSaladWithPersianLimePomegranateDressing from "./avocadoMangoSaladWithPersianLimePomegranateDressing"
+import avocadoSmoothie from "./avocadoSmoothie"
+import baconAndAsparagusFrittata from "./baconAndAsparagusFrittata"
+import bbqChicken from "./bbqChicken"
+import bbqShrimp from "./bbqShrimp"
+import beefBokChoyStirFry from "./beefBokChoyStirFry"
+import blackTruffleHummus from "./blackTruffleHummus"
+import blackberryGingerAndOatSmoothie from "./blackberryGingerAndOatSmoothie"
+import bloodOrangeTangerineChicken from "./bloodOrangeTangerineChicken"
+import blueCheeseCookies from "./blueCheeseCookies"
+import blueCheeseCroquettes from "./blueCheeseCroquettes"
+import breakfastFrittata from "./breakfastFrittata"
+import buffaloCauliflowerWithDippingSauce from "./buffaloCauliflowerWithDippingSauce"
+import butternutSquashBrusselsSproutsSalad from "./butternutSquashBrusselsSproutsSalad"
+import butternutSquashSoup from "./butternutSquashSoup"
+import cannelliniBeanSalad from "./cannelliniBeanSalad"
+import cauliflowerRiceBrownRiceTabouli from "./cauliflowerRiceBrownRiceTabouli"
+import challah from "./challah"
+import chickenSkewersWithThaiPeanutLimeSauce from "./chickenSkewersWithThaiPeanutLimeSauce"
+import chickenWaldorfSaladWithSerranoHoneyDijonDressing from "./chickenWaldorfSaladWithSerranoHoneyDijonDressing"
+import chipotleDarkChocolatePopcorn from "./chipotleDarkChocolatePopcorn"
+import couscousSaladWithGrilledFruit from "./couscousSaladWithGrilledFruit"
+import crabCakesWithChiliLimeSauce from "./crabCakesWithChiliLimeSauce"
+import cranberryWalnutSaladWithGarlicRaspberryDressing from "./cranberryWalnutSaladWithGarlicRaspberryDressing"
+import cranberryWalnutTurkeySalad from "./cranberryWalnutTurkeySalad"
+import decadentSpanishHotChocolate from "./decadentSpanishHotChocolate"
+import dillDeviledEggs from "./dillDeviledEggs"
+import doubleWhippedHolidayEggNogForACrowd from "./doubleWhippedHolidayEggNogForACrowd"
+import easyItalianChickenSalad from "./easyItalianChickenSalad"
+import fantasticFudge from "./fantasticFudge"
+import fruitFunSaladWithCinnamonPearBalsamicVinegar from "./fruitFunSaladWithCinnamonPearBalsamicVinegar"
+import garlicRoastedRadishesWithLemonMintDressing from "./garlicRoastedRadishesWithLemonMintDressing"
+import ghirardelliTripleChocolateMandarinBrownies from "./ghirardelliTripleChocolateMandarinBrownies"
+import goudaCheeseBalls from "./goudaCheeseBalls"
+import grannySmithSlaw from "./grannySmithSlaw"
+import greekSuperSalad from "./greekSuperSalad"
+import grilledGarlicPolentaRoundsWithWildMushrooms from "./grilledGarlicPolentaRoundsWithWildMushrooms"
+import grilledHarissaChickenTenderloinWithCouscous from "./grilledHarissaChickenTenderloinWithCouscous"
+import honeyChipotleAlmondTrailMix from "./honeyChipotleAlmondTrailMix"
+import honeyGingerGarlicSalmon from "./honeyGingerGarlicSalmon"
+import honeyGingerMeringueCookies from "./honeyGingerMeringueCookies"
+import horseradishDressing from "./horseradishDressing"
+import hulaHulaGinShrubCocktail from "./hulaHulaGinShrubCocktail"
+import italianChoppedSaladWithRoastedRedPepperVinaigrette from "./italianChoppedSaladWithRoastedRedPepperVinaigrette"
+import jerkChickenWithGrilledCaribbeanSalsa from "./jerkChickenWithGrilledCaribbeanSalsa"
+import kickItUpANotchQuinoaSalad from "./kickItUpANotchQuinoaSalad"
+import lemonApricotOatmealBars from "./lemonApricotOatmealBars"
+import lemonCodWithPasta from "./lemonCodWithPasta"
+import makeAheadBlackEyedPeaSalad from "./makeAheadBlackEyedPeaSalad"
+import mediterraneanOliveOilCake from "./mediterraneanOliveOilCake"
+import mediterraneanWhiteBeanSoup from "./mediterraneanWhiteBeanSoup"
+import mixedGreensFennelSalad from "./mixedGreensFennelSalad"
+import onePotVegetableStew from "./onePotVegetableStew"
+import parsleyRiceSaladWithToastedAlmondsAndLemon from "./parsleyRiceSaladWithToastedAlmondsAndLemon"
+import partyPopcorn from "./partyPopcorn"
+import pickledShrimpOnions from "./pickledShrimpOnions"
+import quickHerbCornMuffins from "./quickHerbCornMuffins"
+import quinoaBeanSalad from "./quinoaBeanSalad"
+import raspberryLemonade from "./raspberryLemonade"
+import roastedBeetPistachioSalad from "./roastedBeetPistachioSalad"
+import roastedMushroomCherryPorkLoin from "./roastedMushroomCherryPorkLoin"
+import salmonCakes from "./salmonCakes"
+import salmonSpinachFrittata from "./salmonSpinachFrittata"
+import shrimpEnchiladasWithGreenSauce from "./shrimpEnchiladasWithGreenSauce"
+import simpleCarrotSalad from "./simpleCarrotSalad"
+import simpleMushroomAndFreshHerbsSalad from "./simpleMushroomAndFreshHerbsSalad"
+import skeweredLambWithMilaneseGremolataOliveOilOreganoBalsamicVinegar from "./skeweredLambWithMilaneseGremolataOliveOilOreganoBalsamicVinegar"
+import southwestSaladWithCilantroLimeDressing from "./southwestSaladWithCilantroLimeDressing"
+import spanishFrittata from "./spanishFrittata"
+import spanishOliveOil from "./spanishOliveOil"
+import spicyCinnamonRoastedWalnuts from "./spicyCinnamonRoastedWalnuts"
+import spicyCucumberSlices from "./spicyCucumberSlices"
+import spicyPeanutSauce from "./spicyPeanutSauce"
+import spinachRaspberrySaladWithCascadianWildRaspberryDressing from "./spinachRaspberrySaladWithCascadianWildRaspberryDressing"
+import spinachStrawberrySaladWithBasilVanillaBalsamicDressing from "./spinachStrawberrySaladWithBasilVanillaBalsamicDressing"
+import springSalad from "./springSalad"
+import sunDriedTomatoTapenade from "./sunDriedTomatoTapenade"
+import texMexRiceSalad from "./texMexRiceSalad"
+import truffleHummus from "./truffleHummus"
+import turkeySloppyJoes from "./turkeySloppyJoes"
+import upgradedChineseChickenSalad from "./upgradedChineseChickenSalad"
+import watermelonSalad from "./watermelonSalad"
+import zucchiniEggplantStack from "./zucchiniEggplantStack"
 
 const recipes: Recipe[] = [
-  asparagus-salad-with-lemon-tangerine-dressing,
-avocado-mango-salad-with-persian-lime-pomegranate-dressing,
-avocado-smoothie,
-bacon-and-asparagus-frittata,
-bbq-chicken,
-bbq-shrimp,
-beef-bok-choy-stir-fry,
-black-truffle-hummus,
-blackberry-ginger-and-oat-smoothie,
-blood-orange-tangerine-chicken,
-blue-cheese-cookies,
-blue-cheese-croquettes,
-breakfast-frittata,
-buffalo-cauliflower-with-dipping-sauce,
-butternut-squash-brussels-sprouts-salad,
-butternut-squash-soup,
-cannellini-bean-salad,
-cauliflower-rice-brown-rice-tabouli,
-challah,
-chicken-skewers-with-thai-peanut-lime-sauce,
-chicken-waldorf-salad-with-serrano-honey-dijon-dressing,
-chipotle-dark-chocolate-popcorn,
-chipotle-serrano-rib-eye-steaks,
-couscous-salad-with-grilled-fruit,
-crab-cakes-with-chili-lime-sauce,
-cranberry-walnut-salad-with-garlic-raspberry-dressing,
-cranberry-walnut-turkey-salad,
-decadent-spanish-hot-chocolate,
-dill-deviled-eggs,
-double-whipped-holiday-egg-nog-for-a-crowd,
-easy-italian-chicken-salad,
-fantastic-fudge,
-fruit-fun-salad-with-cinnamon-pear-balsamic-vinegar,
-garlic-roasted-radishes-with-lemon-mint-dressing,
-garlicPolentaWMushrooms,
-ghirardelli-triple-chocolate-mandarin-brownies,
-gouda-cheese-balls,
-granny-smith-slaw,
-greek-super-salad,
-grilled-garlic-polenta-rounds-with-wild-mushrooms,
-grilled-harissa-chicken-tenderloin-with-couscous,
-honey-chipotle-almond-trail-mix,
-honey-ginger-garlic-salmon,
-honey-ginger-meringue-cookies,
-horseradish-dressing,
-hula-hula-gin-shrub-cocktail,
-italian-chopped-salad-with-roasted-red-pepper-vinaigrette,
-jerk-chicken-with-grilled-caribbean-salsa,
-kick-it-up-a-notch-quinoa-salad,
-lemon-apricot-oatmeal-bars,
-lemon-cod-with-pasta,
-make-ahead-black-eyed-pea-salad,
-medOliveOilCake,
-mediterranean-olive-oil-cake,
-mediterranean-white-bean-soup,
-mixed-greens-fennel-salad,
-one-pot-vegetable-stew,
-parsley-rice-salad-with-toasted-almonds-and-lemon,
-party-popcorn,
-pickled-shrimp-onions,
-quick-herb-corn-muffins,
-quinoa-bean-salad,
-raspberry-lemonade,
-roasted-beet-pistachio-salad,
-roasted-mushroom-cherry-pork-loin,
-salmon-cakes,
-salmon-spinach-frittata,
-shrimp-enchiladas-with-green-sauce,
-simple-carrot-salad,
-simple-mushroom-and-fresh-herbs-salad,
-skewered-lamb-with-milanese-gremolata-olive-oil-oregano-balsamic-vinegar,
-southwest-salad-with-cilantro-lime-dressing,
-spanish-frittata,
-spanish-olive-oil,
-spicy-cinnamon-roasted-walnuts,
-spicy-cucumber-slices,
-spicy-peanut-sauce,
-spinach-raspberry-salad-with-cascadian-wild-raspberry-dressing,
-spinach-strawberry-salad-with-basil-vanilla-balsamic-dressing,
-spring-salad,
-sun-dried-tomato-tapenade,
-tex-mex-rice-salad,
-truffle-hummus,
-turkey-sloppy-joes,
-upgraded-chinese-chicken-salad,
-watermelon-salad,
-zucchini-eggplant-stack,
+  asparagusSaladWithLemonTangerineDressing,
+  avocadoMangoSaladWithPersianLimePomegranateDressing,
+  avocadoSmoothie,
+  baconAndAsparagusFrittata,
+  bbqChicken,
+  bbqShrimp,
+  beefBokChoyStirFry,
+  blackTruffleHummus,
+  blackberryGingerAndOatSmoothie,
+  bloodOrangeTangerineChicken,
+  blueCheeseCookies,
+  blueCheeseCroquettes,
+  breakfastFrittata,
+  buffaloCauliflowerWithDippingSauce,
+  butternutSquashBrusselsSproutsSalad,
+  butternutSquashSoup,
+  cannelliniBeanSalad,
+  cauliflowerRiceBrownRiceTabouli,
+  challah,
+  chickenSkewersWithThaiPeanutLimeSauce,
+  chickenWaldorfSaladWithSerranoHoneyDijonDressing,
+  chipotleDarkChocolatePopcorn,
+  couscousSaladWithGrilledFruit,
+  crabCakesWithChiliLimeSauce,
+  cranberryWalnutSaladWithGarlicRaspberryDressing,
+  cranberryWalnutTurkeySalad,
+  decadentSpanishHotChocolate,
+  dillDeviledEggs,
+  doubleWhippedHolidayEggNogForACrowd,
+  easyItalianChickenSalad,
+  fantasticFudge,
+  fruitFunSaladWithCinnamonPearBalsamicVinegar,
+  garlicPolentaWMushrooms,
+  garlicRoastedRadishesWithLemonMintDressing,
+  ghirardelliTripleChocolateMandarinBrownies,
+  goudaCheeseBalls,
+  grannySmithSlaw,
+  greekSuperSalad,
+  grilledGarlicPolentaRoundsWithWildMushrooms,
+  grilledHarissaChickenTenderloinWithCouscous,
+  honeyChipotleAlmondTrailMix,
+  honeyGingerGarlicSalmon,
+  honeyGingerMeringueCookies,
+  horseradishDressing,
+  hulaHulaGinShrubCocktail,
+  italianChoppedSaladWithRoastedRedPepperVinaigrette,
+  jerkChickenWithGrilledCaribbeanSalsa,
+  kickItUpANotchQuinoaSalad,
+  lemonApricotOatmealBars,
+  lemonCodWithPasta,
+  makeAheadBlackEyedPeaSalad,
+  medOliveOilCake,
+  mediterraneanOliveOilCake,
+  mediterraneanWhiteBeanSoup,
+  mixedGreensFennelSalad,
+  onePotVegetableStew,
+  parsleyRiceSaladWithToastedAlmondsAndLemon,
+  partyPopcorn,
+  pickledShrimpOnions,
+  quickHerbCornMuffins,
+  quinoaBeanSalad,
+  raspberryLemonade,
+  roastedBeetPistachioSalad,
+  roastedMushroomCherryPorkLoin,
+  salmonCakes,
+  salmonSpinachFrittata,
+  shrimpEnchiladasWithGreenSauce,
+  simpleCarrotSalad,
+  simpleMushroomAndFreshHerbsSalad,
+  skeweredLambWithMilaneseGremolataOliveOilOreganoBalsamicVinegar,
+  southwestSaladWithCilantroLimeDressing,
+  spanishFrittata,
+  spanishOliveOil,
+  spicyCinnamonRoastedWalnuts,
+  spicyCucumberSlices,
+  spicyPeanutSauce,
+  spinachRaspberrySaladWithCascadianWildRaspberryDressing,
+  spinachStrawberrySaladWithBasilVanillaBalsamicDressing,
+  springSalad,
+  sunDriedTomatoTapenade,
+  texMexRiceSalad,
+  truffleHummus,
+  turkeySloppyJoes,
+  upgradedChineseChickenSalad,
+  watermelonSalad,
+  zucchiniEggplantStack,
 ]
 
 export default recipes
-

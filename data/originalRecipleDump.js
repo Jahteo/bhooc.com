@@ -838,48 +838,6 @@ const data = [
     ]
   },
   {
-    "title": "Big Horn olive oil",
-    "link": "https://bhooc.com/?p=1170",
-    "pubDate": "Mon, 28 Oct 2019 08:40:57 +0000",
-    "encoded": [
-      "Big Horn olive oil\n\ntruffle oil\n\nbest olive oil",
-      null
-    ],
-    "post_id": "1170",
-    "post_date": "2019-10-28 08:40:57",
-    "post_name": null,
-    "category": [
-      {
-        "@domain": "post_tag",
-        "@nicename": "best-olive-oil",
-        "#text": "best olive oil"
-      },
-      {
-        "@domain": "post_tag",
-        "@nicename": "big-horn-olive-oil",
-        "#text": "Big Horn olive oil"
-      },
-      {
-        "@domain": "post_tag",
-        "@nicename": "truffle-oil",
-        "#text": "truffle oil"
-      },
-      {
-        "@domain": "category",
-        "@nicename": "uncategorized",
-        "#text": "Uncategorized"
-      }
-    ],
-    "postmeta": [
-      null,
-      {
-        "meta_key": "_yoast_wpseo_metadesc",
-        "meta_value": "Big Horn olive oil"
-      },
-      null
-    ]
-  },
-  {
     "title": "BBQ Chicken",
     "link": "https://bhooc.com/bbq-chicken/",
     "pubDate": "Sat, 05 Jan 2019 05:08:37 +0000",
@@ -4741,13 +4699,14 @@ function splitData(arrOfObjs) {
     // console.log(recipe.title)
     //here's where I take that newRecipe and figure out how to print it to a new ts file.
     const strRecipe = JSON.stringify(newRecipe, null, 2)
+    const camelCasedName = newRecipe.slug.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); })
     const newFile = `import { Recipe } from '../../types/Recipe'
 
 const recipe: Recipe = ${strRecipe}
 
 export default recipe`
 
-    fs.writeFile(`recipes/testDump/${newRecipe.slug}.ts`, newFile, (err) => {
+    fs.writeFile(`recipes/testDump/${camelCasedName}.ts`, newFile, (err) => {
       if (err)
         console.log(err);
       else {

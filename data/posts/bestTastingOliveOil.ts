@@ -1,7 +1,7 @@
 import { Recipe } from '../../types/Recipe'
 
 const recipe: Recipe = {
-  "slug": "chipotle-serrano-rib-eye-steaks",
+  "slug": "best-tasting-olive-oil",
   "name": "Chipotle-Serrano Rib Eye Steaks",
   "img": "",
   "ingredients": [

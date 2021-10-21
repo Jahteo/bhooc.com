@@ -13,17 +13,18 @@ const recipe: Recipe = {
     "1/2 cup toasted walnut pieces",
     "1/2 cup cranberries",
     "1/4 cup Tangerine Balsamic Vinegar",
-    "1/4 cup Lemon Olive Oil",
-    "1 Tsp. dijon mustard",
+    "1/4 cup Lemon Olive Oil"
   ],
   "steps": [
+    "1 Tsp. dijon mustard",
     "Combine first 7 ingredients in a large bowl. Whisk together Olive Oil, Balsamic Vinegar and Dijon mustard. Toss and serve."
   ],
   "description": "Asparagus, chick peas and oranges, oh my! Marry them together with Lemon fused olive oil and Tangerine dark balsamic vinegar for an easy win in the kitchen.",
   "categories": [
-    "Salads"
+    "salads"
   ],
   "products": [
+    "asparagus-salad",
     "lemon-olive-oil",
     "tangerine-balsamic-vinegar"
   ]

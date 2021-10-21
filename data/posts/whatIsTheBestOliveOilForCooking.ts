@@ -16,9 +16,6 @@ const recipe: Recipe = {
     "uncategorized"
   ],
   "products": [
-    "best-olive-oil-for-cooking",
-    "olive-oil-and-vinegar-store",
-    "types-of-olives"
   ]
 }
 

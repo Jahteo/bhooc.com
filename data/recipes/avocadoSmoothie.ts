@@ -12,18 +12,14 @@ const recipe: Recipe = {
     "2 tbsp local honey",
     "2 tsp Ultra Premium Extra Virgin Olive Oil"
   ],
-  "steps": [
-    "Place all ingredients into a blender and blend until smooth.",
-  ],
+  "steps": [],
   "description": "",
   "categories": [
-    "Breakfast",
-    "Drinks"
+    "breakfast",
+    "drinks"
   ],
   "products": [
-    "ultra-premium-mild-evoo",
-    "ultra-premium-medium-evoo",
-    "ultra-premium-robust-evoo"
+    "extra-virgin-olive-oil"
   ]
 }
 
