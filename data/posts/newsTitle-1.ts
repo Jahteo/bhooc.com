@@ -1,6 +1,6 @@
-import { Recipe } from '../../types/Recipe'
+import { Post } from '../../types/Post'
 
-const recipe: Recipe = {
+const post: Post = {
   "slug": "news-title-1",
   "name": "Happy, Healthy New Year from Olive Oil Company",
   "img": "",
@@ -14,4 +14,4 @@ const recipe: Recipe = {
   "products": []
 }
 
-export default recipe
+export default post
