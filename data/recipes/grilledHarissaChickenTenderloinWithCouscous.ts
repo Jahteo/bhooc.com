@@ -28,9 +28,7 @@ const recipe: Recipe = {
   "categories": [],
   "products": [
     "blueberry-balsamic-vinegar",
-    "chicken-tenderloin",
-    "couscous",
-    "harrisa-olive-oil"
+    // "harrisa-olive-oil"
   ]
 }
 

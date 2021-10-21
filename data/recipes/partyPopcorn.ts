@@ -19,15 +19,13 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "sides-appetizers"
+    "Sides"
   ],
   "products": [
-    "baklouti-green-chili-olive-oil",
-    "black-truffle-sea-salt",
+    // "baklouti-green-chili-olive-oil",
     "butter-olive-oil",
     "garlic-olive-oil",
-    "popcorn",
-    "white-truffle-oil"
+    // "white-truffle-oil"
   ]
 }
 

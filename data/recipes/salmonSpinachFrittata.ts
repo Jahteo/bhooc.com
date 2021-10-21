@@ -21,10 +21,6 @@ const recipe: Recipe = {
   "categories": [],
   "products": [
     "basil-olive-oil",
-    "frittata",
-    "salmon",
-    "salmon-spinach-frittata",
-    "spinach"
   ]
 }
 

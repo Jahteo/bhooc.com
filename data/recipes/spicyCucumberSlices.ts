@@ -17,14 +17,13 @@ const recipe: Recipe = {
   ],
   "description": "Jazz up your fish, meats and salads with this quick and simple spicy cucumber recipe. Turn the heat up or down with Chipotle or Baklouti green chili oils.",
   "categories": [
-    "dinner",
-    "lunch",
-    "salads",
-    "sides-appetizers"
+    // "dinner",
+    // "lunch",
+    "Salads",
+    "Sides"
   ],
   "products": [
-    "garnish",
-    "spicy-cucumber-slices"
+    // "garnish",
   ]
 }
 

@@ -25,7 +25,7 @@ const recipe: Recipe = {
   ],
   "description": "2019-06-20",
   "categories": [
-    "salads"
+    "Salads"
   ],
   "products": [
     "coconut-balsamic-vinegar",

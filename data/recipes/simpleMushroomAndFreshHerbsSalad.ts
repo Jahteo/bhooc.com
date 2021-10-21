@@ -21,10 +21,8 @@ const recipe: Recipe = {
   "description": "Sicilian Lemon balsamic vinegar shines in our mushroom and herbs salad recipe. It's healthy, tasty and so simple to prepare. Make extra for a quick lunch.",
   "categories": [],
   "products": [
-    "extra-virgin-olive-oil",
-    "salad",
     "sicilian-lemon-balsamic-vinegar",
-    "ultra-premium-olive-oil"
+    // "ultra-premium-olive-oil"
   ]
 }
 

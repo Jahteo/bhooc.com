@@ -27,10 +27,9 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "sides-appetizers"
+    "Sides"
   ],
   "products": [
-    "crab-cakes",
     "dill-olive-oil",
     "lemon-olive-oil"
   ]

@@ -21,8 +21,7 @@ const recipe: Recipe = {
   "products": [
     "harissa-olive-oil",
     "neapolitan-herb-balsamic-vinegar",
-    "quinoa-salad",
-    "smoked-chabaani-olive-oil"
+    // "smoked-chabaani-olive-oil"
   ]
 }
 

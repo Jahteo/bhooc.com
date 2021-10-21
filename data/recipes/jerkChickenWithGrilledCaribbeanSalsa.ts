@@ -35,7 +35,6 @@ const recipe: Recipe = {
   "categories": [],
   "products": [
     "cilantro-roasted-onion-olive-oil",
-    "jerk-chicken-with-grilled-caribbean-salsa",
     "pineapple-balsamic-vinegar"
   ]
 }

@@ -21,10 +21,9 @@ const recipe: Recipe = {
   ],
   "description": "Asparagus, chick peas and oranges, oh my! Marry them together with Lemon fused olive oil and Tangerine dark balsamic vinegar for an easy win in the kitchen.",
   "categories": [
-    "salads"
+    "Salads"
   ],
   "products": [
-    "asparagus-salad",
     "lemon-olive-oil",
     "tangerine-balsamic-vinegar"
   ]

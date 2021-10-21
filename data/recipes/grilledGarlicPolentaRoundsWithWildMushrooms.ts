@@ -10,13 +10,13 @@ const recipe: Recipe = {
   ],
   "description": "1",
   "categories": [
-    "breakfast",
-    "dinner",
-    "entrees",
-    "sides-appetizers"
+    "Breakfast",
+    // "dinner",
+    // "entrees",
+    "Sides"
   ],
   "products": [
-    "grilled-garlic-polenta-rounds-with-wild-mushrooms"
+    // "grilled-garlic-polenta-rounds-with-wild-mushrooms"
   ]
 }
 

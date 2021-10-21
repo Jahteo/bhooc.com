@@ -26,7 +26,6 @@ const recipe: Recipe = {
   "products": [
     "champagne-wine-vinegar",
     "honey-ginger-balsamic-vinegar",
-    "stir-fry"
   ]
 }
 

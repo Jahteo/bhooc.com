@@ -20,13 +20,12 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "salads",
-    "sides-appetizers"
+    "Salads",
+    "Sides"
   ],
   "products": [
     "blood-orange-olive-oil",
     "lemongrass-mint-balsamic-vinegar",
-    "watermelon-salad"
   ]
 }
 

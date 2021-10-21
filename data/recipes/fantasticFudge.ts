@@ -21,9 +21,6 @@ const recipe: Recipe = {
   "description": "Who doesn't like a yummy piece of old-fashioned fudge at the holidays? fudge graces lots of tables, and the flavor options are limitless. Try it!",
   "categories": [],
   "products": [
-    "big-horn-fudge",
-    "chocolate-fudge",
-    "fudge"
   ]
 }
 

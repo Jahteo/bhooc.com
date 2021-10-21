@@ -15,11 +15,11 @@ const recipe: Recipe = {
   "steps": [],
   "description": "",
   "categories": [
-    "breakfast",
-    "drinks"
+    "Breakfast",
+    "Drinks"
   ],
   "products": [
-    "extra-virgin-olive-oil"
+    "ultra-premium-mild-evoo"
   ]
 }
 

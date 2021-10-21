@@ -23,11 +23,9 @@ const recipe: Recipe = {
   "description": "Cascadian Wild Raspberry white balsamic vinegar is the star in this salad. All your other ingredients come to life with just a kiss of sweet, fresh berries.",
   "categories": [],
   "products": [
-    "big-horn-extra-virgin-olive-oil",
-    "cascadian-wild-raspberry-white-balsamic-vinegar",
+    // "big-horn-extra-virgin-olive-oil",
+    // "cascadian-wild-raspberry-white-balsamic-vinegar",
     "raspberry-balsamic-vinegar",
-    "spinach-and-raspberry-salad",
-    "spinach-salad"
   ]
 }
 

@@ -19,10 +19,7 @@ const recipe: Recipe = {
   "description": "Our Challah bread recipe is sure to become a favorite at your holiday table. Blood orange olive oil is just one of many flavor options to enhance this staple.",
   "categories": [],
   "products": [
-    "big-horn-olive-oil",
     "blood-orange-olive-oil",
-    "challah",
-    "challah-bread"
   ]
 }
 

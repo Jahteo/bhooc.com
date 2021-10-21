@@ -24,10 +24,10 @@ const recipe: Recipe = {
   ],
   "description": "Basil olive oil and Gravenstein Apple white balsamic vinegar marry together mixed greens and fennel to wow any palate. Try different oil and vinegars too.",
   "categories": [
-    "salads"
+    "Salads"
   ],
   "products": [
-    "big-horn-basil-olive-oil",
+    "basil-olive-oil",
     "gravenstein-apple-balsamic-vinegar"
   ]
 }

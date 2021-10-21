@@ -20,14 +20,10 @@ const recipe: Recipe = {
   ],
   "description": "There is a whole new side to lamb when you pair Milanese Gremolata olive oil and Oregano balsamic vinegar in this tasty dish. Serve as the main or side dish.",
   "categories": [
-    "dinner"
+    // "dinner"
   ],
   "products": [
-    "dinner",
-    "lamb",
-    "milanese-gremolata",
     "milanese-gremolata-olive-oil",
-    "oregano",
     "oregano-balsamic-vinegar"
   ]
 }

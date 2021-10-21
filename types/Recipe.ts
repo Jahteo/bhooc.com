@@ -1,6 +1,6 @@
 import { ProductSlugs } from "./ProductSlugs"
 
-type categories = "Dessert" | "Sides" | "Sauces" | "Mains" | "Soups" | "Salads" | "Drinks" | "Breakfast" | "uncategorized"
+type categories = "Dessert" | "Sides" | "Sauces" | "Mains" | "Soups" | "Salads" | "Drinks" | "Breakfast" | "Vegan"
 
 export interface Recipe {
     slug: string;

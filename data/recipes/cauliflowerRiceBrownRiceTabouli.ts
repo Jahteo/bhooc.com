@@ -23,14 +23,11 @@ const recipe: Recipe = {
   ],
   "description": "Black Truffle infused sea salt tops this healthy and delicious dish. Serve with Herbes de Provence oil and Sicilian Lemon white balsamic vinegar. Easy prep.",
   "categories": [
-    "sides-appetizers"
+    "Sides"
   ],
   "products": [
-    "black-truffle-salt",
-    "black-truffle-sea-salt",
     "herbes-de-provence-olive-oil",
-    "rice-salad",
-    "sicilian-lemon-white-balsamic-vinegar"
+    "sicilian-lemon-balsamic-vinegar"
   ]
 }
 

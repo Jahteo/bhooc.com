@@ -15,11 +15,11 @@ const recipe: Recipe = {
   ],
   "description": "Wow your guests with Mandarin infused Ghirardelli triple chocolate brownies. They won't expect the rich flavor they'll taste. Try other oils to mix it up!",
   "categories": [
-    "dessert"
+    "Dessert"
   ],
   "products": [
     "blood-orange-olive-oil",
-    "mandarin-olive-oil"
+    // "mandarin-olive-oil"
   ]
 }
 

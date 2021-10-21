@@ -28,12 +28,11 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "breakfast",
-    "dessert"
+    "Breakfast",
+    "Dessert"
   ],
   "products": [
     "lemon-olive-oil",
-    "lemon-apricot-oatmeal-bars"
   ]
 }
 

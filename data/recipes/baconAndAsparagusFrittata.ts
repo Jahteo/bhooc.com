@@ -23,7 +23,6 @@ const recipe: Recipe = {
   "description": "Garlic infused olive oil is the secret to this dangerously delicious dish. Come to the table with fork and napkin ready. The bacon jazzes up this meal.",
   "categories": [],
   "products": [
-    "bacon-and-asparagus-frittata",
     "garlic-olive-oil"
   ]
 }

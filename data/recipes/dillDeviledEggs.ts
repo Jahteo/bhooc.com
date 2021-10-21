@@ -20,12 +20,11 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "sides-appetizers"
+    "Sides"
   ],
   "products": [
-    "big-horn-dill-olive-oil",
+    "dill-olive-oil",
     "champagne-wine-vinegar",
-    "dill-deviled-eggs"
   ]
 }
 

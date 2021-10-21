@@ -24,8 +24,6 @@ const recipe: Recipe = {
   "description": "Persian Lime olive oil and Pomegranate dark balsamic vinegar pair in this recipe for a mouth-popping salad. Serve for lunch or dinner. Satisfy your tastebuds.",
   "categories": [],
   "products": [
-    "avocado-salad",
-    "mango-salad",
     "persian-lime-olive-oil",
     "pomegranate-balsamic-vinegar"
   ]

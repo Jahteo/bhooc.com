@@ -22,7 +22,7 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "salads"
+    "Salads"
   ],
   "products": [
     "serrano-honey-vinegar"

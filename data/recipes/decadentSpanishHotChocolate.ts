@@ -10,10 +10,9 @@ const recipe: Recipe = {
   ],
   "description": "1",
   "categories": [
-    "drinks"
+    "Drinks"
   ],
   "products": [
-    "decadent-spanish-hot-chocolate"
   ]
 }
 

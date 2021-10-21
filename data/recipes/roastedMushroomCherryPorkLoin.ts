@@ -22,13 +22,11 @@ const recipe: Recipe = {
   ],
   "description": "Wild Mushroom & Sage olive oil paired with Black Cherry balsamic vinegar are a winning combination with this timeless favorite. Serve warm and await smiles.",
   "categories": [
-    "dinner"
+    // "dinner"
   ],
   "products": [
     "black-cherry-balsamic-vinegar",
-    "pork-loin",
-    "pork-roast-dinner",
-    "wild-mushroom-sage-olive-oil"
+    // "wild-mushroom-sage-olive-oil"
   ]
 }
 

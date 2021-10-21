@@ -24,14 +24,13 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "salads"
+    "Salads",
+    "Vegan"
   ],
   "products": [
     "chipotle-olive-oil",
-    "jalapeno-white-balsamic-vinegar",
-    "salad",
-    "tex-mex-rice-salad",
-    "vegan"
+    // "jalapeno-white-balsamic-vinegar",
+    // "salad",
   ]
 }
 

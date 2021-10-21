@@ -26,8 +26,8 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "dressings-and-vinaigrettes",
-    "salads"
+    // "dressings-and-vinaigrettes",
+    "Salads"
   ],
   "products": []
 }

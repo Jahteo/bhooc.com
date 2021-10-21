@@ -22,9 +22,8 @@ const recipe: Recipe = {
   "description": "Oh, wow! Wait until you try this recipe. It's a must for summer and seafood fans. This delicious dish features Champagne and Sicilian Lemon vinegars.",
   "categories": [],
   "products": [
-    "big-horn-extra-virgin-olive-oil",
+    // "big-horn-extra-virgin-olive-oil",
     "champagne-wine-vinegar",
-    "seafood-salad",
     "sicilian-lemon-balsamic-vinegar"
   ]
 }

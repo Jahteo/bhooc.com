@@ -17,9 +17,7 @@ const recipe: Recipe = {
   "description": "Cinnamon Pear balsamic vinegar is featured in this sweet and satisfying fruit salad. Garnish with any nut to add texture. Try a white balsamic next time!",
   "categories": [],
   "products": [
-    "apple-salad",
-    "balsamic-vinegar",
-    "cinnamon-pear"
+
   ]
 }
 

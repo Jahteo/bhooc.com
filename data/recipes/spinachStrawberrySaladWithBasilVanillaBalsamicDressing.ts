@@ -18,12 +18,11 @@ const recipe: Recipe = {
   ],
   "description": "Wow your tastebuds with this refreshing and satisfying anytime salad. Spinach presents basil and vanilla flavors to dazzle. Perfect for lunch or dinner.",
   "categories": [
-    "salads"
+    "Salads"
   ],
   "products": [
-    "big-horn-basil-olive-oil",
-    "big-horn-vanilla-balsamic-vinegar",
-    "strawberry-salad"
+    "basil-olive-oil",
+    "vanilla-balsamic-vinegar",
   ]
 }
 

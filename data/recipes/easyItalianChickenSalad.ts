@@ -24,9 +24,6 @@ const recipe: Recipe = {
   "description": "There's nothing easier than shredding rotisserie chicken and serving with Serrano Honey vinegar and Sicilian Lemon balsamic vinaigrette. Toss and enjoy!",
   "categories": [],
   "products": [
-    "chicken-salad",
-    "easy-dinner",
-    "italian-chicken-salad",
     "serrano-honey-vinegar",
     "sicilian-lemon-balsamic-vinegar"
   ]

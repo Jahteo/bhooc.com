@@ -20,12 +20,10 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "salads",
-    "sides-appetizers"
+    "Salads",
+    "Sides"
   ],
   "products": [
-    "carrot-salad",
-    "pineapple-bal"
   ]
 }
 

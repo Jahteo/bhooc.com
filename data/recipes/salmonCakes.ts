@@ -23,7 +23,6 @@ const recipe: Recipe = {
   "products": [
     "basil-olive-oil",
     "dill-olive-oil",
-    "salmon-cakes"
   ]
 }
 

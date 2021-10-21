@@ -17,11 +17,11 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "dessert",
-    "sides-appetizers"
+    "Dessert",
+    "Sides"
   ],
   "products": [
-    "spicy-cinnamon-roasted-walnuts"
+
   ]
 }
 

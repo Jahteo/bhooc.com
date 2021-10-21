@@ -21,11 +21,11 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "salads"
+    "Salads"
   ],
   "products": [
-    "roasted-almond-oil",
-    "traditional-dark-balsamic"
+    // "roasted-almond-oil",
+    // "traditional-dark-balsamic"
   ]
 }
 

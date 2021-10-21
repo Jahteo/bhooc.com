@@ -20,11 +20,11 @@ const recipe: Recipe = {
   ],
   "description": "2019-08-20",
   "categories": [
-    "salads",
-    "sides-appetizers"
+    "Salads",
+    "Sides"
   ],
   "products": [
-    "baklouti-green-chili-olive-oil",
+    // "baklouti-green-chili-olive-oil",
     "serrano-honey-vinegar"
   ]
 }

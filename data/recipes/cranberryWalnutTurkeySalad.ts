@@ -12,9 +12,8 @@ const recipe: Recipe = {
   ],
   "description": "1",
   "categories": [
-    "breakfast",
-    "entrees",
-    "entrees-recipes"
+    "Breakfast",
+    "Mains"
   ],
   "products": []
 }

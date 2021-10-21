@@ -21,14 +21,12 @@ const recipe: Recipe = {
   ],
   "description": "Our super easy Butternut Squash soup is a hit with Baklouti Green Chili olive oil. Serve as a meal, or over rice and other veggies. Try other oils for flavor.",
   "categories": [
-    "dinner",
-    "lunch",
-    "sides-appetizers"
+    "Mains",
+    "Sides",
+    "Vegan"
   ],
   "products": [
-    "baklouti-green-chili-olive-oil",
-    "butternut-squash-soup",
-    "vegan-soup"
+    "baklouti-olive-oil",
   ]
 }
 

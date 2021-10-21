@@ -20,7 +20,6 @@ const recipe: Recipe = {
   "categories": [],
   "products": [
     "blood-orange-olive-oil",
-    "chicken",
     "tangerine-balsamic-vinegar"
   ]
 }

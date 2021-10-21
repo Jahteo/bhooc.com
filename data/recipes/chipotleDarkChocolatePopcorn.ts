@@ -18,8 +18,8 @@ const recipe: Recipe = {
   ],
   "description": "1",
   "categories": [
-    "dessert",
-    "sides-appetizers"
+    "Dessert",
+    "Sides"
   ],
   "products": []
 }

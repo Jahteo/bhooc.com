@@ -33,13 +33,13 @@ const recipe: Recipe = {
   ],
   "description": "1",
   "categories": [
-    "dinner",
-    "entrees",
-    "entrees-recipes"
+    // "dinner",
+    // "entrees",
+    // "entrees-recipes"
   ],
   "products": [
     "garlic-olive-oil",
-    "shrimp-enchiladas"
+
   ]
 }
 

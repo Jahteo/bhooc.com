@@ -10,10 +10,9 @@ const recipe: Recipe = {
   ],
   "description": "1",
   "categories": [
-    "dessert"
+    "Dessert"
   ],
   "products": [
-    "blue-cheese-cookies"
   ]
 }
 

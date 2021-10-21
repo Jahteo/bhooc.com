@@ -18,8 +18,6 @@ const recipe: Recipe = {
   "description": "Our barbeque shrimp recipe witll rock your grill with Persian Lime olive oil and Coconut balsamic vinegar. Serve hot or cold for a winning side or entree.",
   "categories": [],
   "products": [
-    "barbeque-shrimp",
-    "bbq-shrimp",
     "coconut-balsamic-vinegar",
     "persian-lime-olive-oil"
   ]

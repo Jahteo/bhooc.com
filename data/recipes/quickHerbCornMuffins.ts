@@ -20,13 +20,11 @@ const recipe: Recipe = {
   ],
   "description": "1",
   "categories": [
-    "sides-appetizers"
+    "Sides"
   ],
   "products": [
-    "baklouti-green",
+    // "baklouti-green",
     "basil-olive-oil",
-    "corn-muffins",
-    "herb-corn-muffins"
   ]
 }
 

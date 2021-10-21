@@ -24,13 +24,11 @@ const recipe: Recipe = {
   ],
   "description": "1",
   "categories": [
-    "dinner",
-    "entrees",
-    "lunch"
+    // "dinner",
+    // "entrees",
+    // "lunch"
   ],
   "products": [
-    "sloppy-joes",
-    "turkey-sloppy-joes"
   ]
 }
 

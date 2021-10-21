@@ -28,7 +28,6 @@ const recipe: Recipe = {
   "description": "Spice up barbeque season with's BBQ Chicken recipe. Chipotle olive oil and Serrano Honey vinegar bring together this dish to make lots of smiles.",
   "categories": [],
   "products": [
-    "bbq-chicken",
     "chipotle-olive-oil",
     "serrano-honey-vinegar"
   ]

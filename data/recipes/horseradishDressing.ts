@@ -19,9 +19,7 @@ const recipe: Recipe = {
   "description": "Our Horseradish dressing recipe features Serrano Honey vinegar and Honey Ginger balsamic vinegar. Turn up the flavor with simple ingredients for all meats.",
   "categories": [],
   "products": [
-    "dressing",
     "honey-ginger-balsamic-vinegar",
-    "horseradish-dressing",
     "serrano-honey-vinegar"
   ]
 }

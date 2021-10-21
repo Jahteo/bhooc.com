@@ -32,7 +32,7 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "salads"
+    "Salads"
   ],
   "products": [
     "red-wine-vinegar",

@@ -20,13 +20,11 @@ const recipe: Recipe = {
   ],
   "description": "Big Horn Lemongrass Mint balsamic vinegar and Honey Ginger balsamic vinegar turns up the zip in this delectable sauce recipe. Spread on literally anything.",
   "categories": [
-    "dips-sauces-recipes"
+    // "Sauces"
   ],
   "products": [
-    "big-horn-lemongrass-mint-balsamic-vinegar",
+    "lemongrass-mint-balsamic-vinegar",
     "honey-ginger-balsamic-vinegar",
-    "peanut-sauce",
-    "spicy-peanut-sauce"
   ]
 }
 

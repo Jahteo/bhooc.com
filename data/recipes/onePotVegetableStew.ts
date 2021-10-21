@@ -28,9 +28,9 @@ const recipe: Recipe = {
   ],
   "description": "1",
   "categories": [
-    "dinner",
-    "entrees",
-    "soups"
+    // "dinner",
+    // "entrees",
+    // "soups"
   ],
   "products": []
 }

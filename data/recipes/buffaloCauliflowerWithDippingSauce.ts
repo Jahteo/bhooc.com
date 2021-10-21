@@ -23,11 +23,11 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "dips-sauces-recipes",
-    "sides-appetizers"
+    "Sauces",
+"Sides"
   ],
   "products": [
-    "buffalo-cauliflower"
+
   ]
 }
 

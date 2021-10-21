@@ -23,7 +23,7 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "salads"
+    "Salads"
   ],
   "products": [
     "cilantro-roasted-onion-olive-oil",

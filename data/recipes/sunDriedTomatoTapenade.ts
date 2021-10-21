@@ -10,10 +10,9 @@ const recipe: Recipe = {
   ],
   "description": "1",
   "categories": [
-    "dips-sauces-recipes"
+    "Sauces"
   ],
   "products": [
-    "sun-dried-tomato-tapenade"
   ]
 }
 

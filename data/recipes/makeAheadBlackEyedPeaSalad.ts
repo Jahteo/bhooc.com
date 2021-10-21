@@ -22,10 +22,9 @@ const recipe: Recipe = {
   ],
   "description": "1",
   "categories": [
-    "salads"
+    "Salads"
   ],
   "products": [
-    "black-eye-pea-salad",
     "oregano-balsamic-vinegar",
     "persian-lime-olive-oil"
   ]

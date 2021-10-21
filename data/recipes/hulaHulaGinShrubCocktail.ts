@@ -17,13 +17,12 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "drinks"
+    "Drinks"
   ],
   "products": [
     "pomegranate-balsamic-vinegar",
-    "shrub",
-    "shrub-cocktail",
-    "vinegar-cocktail"
+    // "shrub",
+    // "shrub-cocktail",
   ]
 }
 

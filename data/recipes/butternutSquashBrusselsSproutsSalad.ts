@@ -25,12 +25,10 @@ const recipe: Recipe = {
   ],
   "description": "Red Apple balsamic vinegar marries together the rich ingredients in this recipe. Serve as a main dish, or compliment meats and other sides with this tasty dish.",
   "categories": [
-    "dinner",
-    "lunch",
-    "salads"
+    "Mains",
+    "Salads"
   ],
   "products": [
-    "almond-oil",
     "garlic-olive-oil",
     "red-apple-balsamic-vinegar"
   ]

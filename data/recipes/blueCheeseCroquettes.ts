@@ -20,10 +20,10 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "sides-appetizers"
+    "Sides"
   ],
   "products": [
-    "blue-cheese-croquettes"
+
   ]
 }
 

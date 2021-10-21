@@ -16,13 +16,10 @@ const recipe: Recipe = {
   ],
   "description": "The simplest desserts are sometimes the best, and our Honey Ginger flavored meringue cookies make an easy impression. They're so easy to make. Serve tonight!",
   "categories": [
-    "dessert"
+    "Dessert"
   ],
   "products": [
-    "french-dessert",
     "honey-ginger-balsamic-vinegar",
-    "meringue-cookies",
-    "meringues"
   ]
 }
 

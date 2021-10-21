@@ -17,11 +17,11 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "salads",
-    "sides-appetizers"
+    "Salads",
+    "Sides"
   ],
   "products": [
-    "sicilian-lemon-white-balsamic-vinegar"
+    "sicilian-lemon-balsamic-vinegar"
   ]
 }
 

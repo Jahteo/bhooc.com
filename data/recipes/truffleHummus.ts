@@ -23,12 +23,11 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "dips-sauces-recipes",
-    "sides-appetizers"
+    "Sauces",
+    "Sides"
   ],
   "products": [
-    "truffle-hummus",
-    "truffle-oil"
+    // "truffle-oil"
   ]
 }
 

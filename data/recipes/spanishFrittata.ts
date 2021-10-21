@@ -10,12 +10,11 @@ const recipe: Recipe = {
   ],
   "description": "1",
   "categories": [
-    "breakfast",
-    "entrees",
-    "uncategorized"
+    "Breakfast",
+    // "entrees",
   ],
   "products": [
-    "spanish-frittata"
+
   ]
 }
 

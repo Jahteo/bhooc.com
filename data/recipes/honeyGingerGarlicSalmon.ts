@@ -17,7 +17,6 @@ const recipe: Recipe = {
   "products": [
     "garlic-olive-oil",
     "honey-ginger-balsamic-vinegar",
-    "salmon"
   ]
 }
 

@@ -20,12 +20,11 @@ const recipe: Recipe = {
   ],
   "description": "Garlic and raspberry in a salad dressing? We couldn't live without it! This salad shines with deep flavors and loads of satisfaction. Try other vinegars too",
   "categories": [
-    "salads"
+    "Salads"
   ],
   "products": [
-    "cranberry-walnut-salad",
     "garlic-olive-oil",
-    "raspberry-dark-balsamic-vinegar"
+
   ]
 }
 

@@ -17,10 +17,10 @@ const recipe: Recipe = {
   ],
   "description": "Garlic oil, Butter oil and Lemongrass Mint balsamic vinegar, oh my! This tasty dish can be served hot or cold and is sure to win at the table with guests.",
   "categories": [
-    "sides-appetizers"
+    "Sides"
   ],
   "products": [
-    "big-horn-lemongrass-mint-balsamic-vinegar",
+    "lemongrass-mint-balsamic-vinegar",
     "butter-olive-oil",
     "garlic-olive-oil"
   ]

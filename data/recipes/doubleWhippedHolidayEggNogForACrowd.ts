@@ -25,11 +25,9 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "drinks"
+    "Drinks"
   ],
   "products": [
-    "double-whipped-holiday-egg-nog-for-a-crowd",
-    "holiday-egg-nog"
   ]
 }
 

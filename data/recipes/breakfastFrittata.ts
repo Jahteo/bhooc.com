@@ -21,10 +21,9 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "breakfast"
+    "Breakfast"
   ],
   "products": [
-    "balsamic-reduction",
     "herbes-de-provence-olive-oil"
   ]
 }

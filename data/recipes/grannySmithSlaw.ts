@@ -22,7 +22,7 @@ const recipe: Recipe = {
   ],
   "description": "You haven't lived until you taste our Granny Smith slaw, featuring Cilantro Roasted Onion olive oil and Serrano Honey vinegar. Serve as a side or for lunch.",
   "categories": [
-    "sides-appetizers"
+    "Sides"
   ],
   "products": [
     "cilantro-roasted-onion-olive-oil",

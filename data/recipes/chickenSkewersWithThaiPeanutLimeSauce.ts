@@ -29,15 +29,13 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "dinner",
-    "sides-appetizers"
+    "Mains",
+    "Sides"
   ],
   "products": [
-    "big-horn-persian-lime-olive-oil",
     "cilantro-roasted-onion-olive-oil",
     "coconut-balsamic-vinegar",
     "persian-lime-olive-oil",
-    "thai-chicken"
   ]
 }
 

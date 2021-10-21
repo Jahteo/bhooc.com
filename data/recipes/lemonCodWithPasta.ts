@@ -18,13 +18,11 @@ const recipe: Recipe = {
   ],
   "description": "",
   "categories": [
-    "dinner"
+    // "dinner"
   ],
   "products": [
-    "cod",
-    "milanese-gremolata",
     "milanese-gremolata-olive-oil",
-    "pasta",
+    // "pasta",
     "tuscan-herb-olive-oil"
   ]
 }
