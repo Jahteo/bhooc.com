@@ -4740,7 +4740,14 @@ function splitData(arrOfObjs) {
 
     // console.log(recipe.title)
     //here's where I take that newRecipe and figure out how to print it to a new ts file.
-    fs.writeFile(`/testDump/${newRecipe.slug}.ts`, JSON.stringify(newRecipe, null, 2), (err) => {
+    const strRecipe = JSON.stringify(newRecipe, null, 2)
+    const newFile = `import { Recipe } from '../../types/Recipe'
+
+const recipe: Recipe = ${strRecipe}
+
+export default recipe`
+
+    fs.writeFile(`recipes/testDump/${newRecipe.slug}.ts`, newFile, (err) => {
       if (err)
         console.log(err);
       else {
