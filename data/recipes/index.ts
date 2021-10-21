@@ -72,7 +72,6 @@ import simpleMushroomAndFreshHerbsSalad from "./simpleMushroomAndFreshHerbsSalad
 import skeweredLambWithMilaneseGremolataOliveOilOreganoBalsamicVinegar from "./skeweredLambWithMilaneseGremolataOliveOilOreganoBalsamicVinegar"
 import southwestSaladWithCilantroLimeDressing from "./southwestSaladWithCilantroLimeDressing"
 import spanishFrittata from "./spanishFrittata"
-import spanishOliveOil from "./spanishOliveOil"
 import spicyCinnamonRoastedWalnuts from "./spicyCinnamonRoastedWalnuts"
 import spicyCucumberSlices from "./spicyCucumberSlices"
 import spicyPeanutSauce from "./spicyPeanutSauce"
@@ -160,7 +159,6 @@ const recipes: Recipe[] = [
   skeweredLambWithMilaneseGremolataOliveOilOreganoBalsamicVinegar,
   southwestSaladWithCilantroLimeDressing,
   spanishFrittata,
-  spanishOliveOil,
   spicyCinnamonRoastedWalnuts,
   spicyCucumberSlices,
   spicyPeanutSauce,
