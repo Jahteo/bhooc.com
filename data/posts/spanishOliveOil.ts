@@ -12,14 +12,14 @@ const recipe: Recipe = {
   ],
   "description": "Our fresh Spanish olive oil is high in antioxidants and full of flavor! Choose from our Picual or Hojiblanca varietals for dips, dressings and marinades.",
   "categories": [
-    "uncategorized"
+    // "uncategorized"
   ],
   "products": [
-    "extra-virgin-olive-oil",
-    "olive-oil-and-blood-pressure",
-    "olive-oil-company",
-    "spanish-olive-oil",
-    "the-olive-oil"
+    // "extra-virgin-olive-oil",
+    // "olive-oil-and-blood-pressure",
+    // "olive-oil-company",
+    // "spanish-olive-oil",
+    // "the-olive-oil"
   ]
 }
 
